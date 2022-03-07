@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- HTLM5shiv ie6~8 -->
+		<!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>
+		<![endif]-->
+		<!-- agGrid -->
+		<script src="../ag-grid/ag-grid-community.min.noStyle.js"></script>
+		<link rel="stylesheet" href="../ag-grid/ag-grid.css">
+		<link rel="stylesheet" href="../ag-grid/ag-theme-balham.css">
+		<!-- agGrid -->
+		<link href="../css/reset.css" rel="stylesheet" />
+		<link href="../css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="../css/zTreeStyle.css" type="text/css">
+		<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.ztree.core.js"></script>
+		<script type="text/javascript">
+				<!--
+				var setting = {
+					view: {
+						showIcon: showIconForTree
+					},
+					data: {
+						simpleData: {
+							enable: true
+						}
+					}
+				};
+
+				var zNodes =[
+					{ id:1, pId:0, name:"pNode 1", open:true},
+					{ id:11, pId:1, name:"pNode 11"},
+					{ id:111, pId:11, name:"leaf node 111"},
+					{ id:112, pId:11, name:"leaf node 112"},
+					{ id:113, pId:11, name:"leaf node 113"},
+					{ id:114, pId:11, name:"leaf node 114"},
+					{ id:12, pId:1, name:"pNode 12"},
+					{ id:121, pId:12, name:"leaf node 121"},
+					{ id:122, pId:12, name:"leaf node 122"},
+					{ id:123, pId:12, name:"leaf node 123"},
+					{ id:124, pId:12, name:"leaf node 124"},
+					{ id:13, pId:1, name:"pNode 13 - no child", isParent:true},
+					{ id:2, pId:0, name:"pNode 2"},
+					{ id:21, pId:2, name:"pNode 21", open:true},
+					{ id:211, pId:21, name:"leaf node 211"},
+					{ id:212, pId:21, name:"leaf node 212"},
+					{ id:213, pId:21, name:"leaf node 213"},
+					{ id:214, pId:21, name:"leaf node 214"},
+					{ id:22, pId:2, name:"pNode 22"},
+					{ id:221, pId:22, name:"leaf node 221"},
+					{ id:222, pId:22, name:"leaf node 222"},
+					{ id:223, pId:22, name:"leaf node 223"},
+					{ id:224, pId:22, name:"leaf node 224"},
+					{ id:23, pId:2, name:"pNode 23"},
+					{ id:231, pId:23, name:"leaf node 231"},
+					{ id:232, pId:23, name:"leaf node 232"},
+					{ id:233, pId:23, name:"leaf node 233"},
+					{ id:234, pId:23, name:"leaf node 234"},
+					{ id:3, pId:0, name:"pNode 3 - no child", isParent:true}
+				];
+
+				function showIconForTree(treeId, treeNode) {
+					return !treeNode.isParent;
+				};
+
+				$(document).ready(function(){
+					$.fn.zTree.init($(".treeDemo"), setting, zNodes);
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div class="header">
+					<h1 class="logo"><span>Mobigen</span></h1>
+					
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#">데이터 검색</a>
+								<div class="nav-sub">
+									<h3>데이터 검색</h3>
+									<ul>
+										<li><a href="#">종합 검색</a></li>
+										<li><a href="#">테마 검색</a></li>
+										<li><a href="#">시각화 검색</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">데이터 서비스</a>
+								<div class="nav-sub">
+									<h3>데이터 서비스</h3>
+									<ul>
+										<li>
+											<a href="#">전체 보고서 / 서비스</a>
+										</li>
+										<li>
+											<a href="#">추천 보고서 / 서비스</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">커뮤니케이션</a>
+								<div class="nav-sub">
+									<h3>커뮤니케이션</h3>
+									<ul>
+										<li><a href="#">전체 현황</a></li>
+										<li><a href="#">수집 / 제공 요청</a></li>
+										<li><a href="#">과제 / 분석 요청</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">이용안내</a>
+								<div class="nav-sub">
+									<h3>이용안내</h3>
+									<ul>
+										<li><a href="#">이용 가이드</a></li>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">자료실</a></li>
+										<li><a href="#">Q&A</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="click-side-menu">
+								<a href="#">사용자 이용현황</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="nav-dim"></div>
+					<!-- pc -->
+					<div class="private" tabindex="1">
+						<span class="user-name">홍길동 님</span>
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg plus"></i></button>
+					</div>
+					<!-- //pc -->
+					<!-- mobile -->
+					<div class="menu-btn">
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg menu"></i></button>
+					</div>
+					<!-- //mobile -->
+				</div>
+			</header>
+			<main>
+<section>
+
+<div class="mu-dialog-background"></div>
+
+<!-- dialog : 회원가입 -->
+<div class="mu-dialog" style="top:100px;left:50px;width:600px;">
+	<div class="mu-dialog-head">
+		<span class="title">회원가입</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-formbox">
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">아이디</label>
+				</div>
+				<div class="cont">
+					<div class="mu-item-group">
+						<input type="text" class="mu-input w190" placeholder="아이디">
+						<button type="button" class="mu-btn"><span>중복확인</span></button>
+					</div>
+					<div class="input-msg">
+						<p class="input-reference" style="display:block;">아이디는 3 ~ 20자 영어와 숫자, _를(영어로 시작) 사용하세요.</p>
+						<p class="input-success" style="display:none;">사용 가능한 아이디 입니다.</p>
+						<p class="input-warning" style="display:none;">이미 사용중인 아이디 입니다.</p>
+						<p class="input-warning" style="display:none;">아이디는 3 ~ 20자 영어와 숫자, _를(영어로 시작) 사용하세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">비밀번호</label>
+				</div>
+				<div class="cont">
+					<input type="password" class="mu-input w190" placeholder="비밀번호">
+					<div class="input-msg">
+						<p class="input-reference" style="display:block;">비밀번호는 8~16자의 영문 대소문자, 숫자 및 특수문자를 사용하세요.</p>
+						<p class="input-warning" style="display:none;">비밀번호는 8~16자의 영문 대소문자, 숫자 및 특수문자를 사용하세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">비밀번호 확인</label>
+				</div>
+				<div class="cont">
+					<input type="password" class="mu-input w190" placeholder="비밀번호 확인">
+					<div class="input-msg">
+						<p class="input-reference" style="display:none;">비밀번호를 한번 더 입력하여 주세요.</p>
+						<p class="input-success" style="display:none;">비밀번호가 일치합니다.</p>
+						<p class="input-warning" style="display:block;">비밀번호가 일치하지 않습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>이름</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input w190">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>연락처</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input w190">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>소속</label>
+				</div>
+				<div class="cont">
+					<div class="mu-item-group">
+						<input type="text" class="mu-input w190">
+						<button type="button" class="mu-btn"><span>선택하기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">E-mail</label>
+				</div>
+				<div class="cont">
+					<div class="mu-item-group">
+						<input type="text" class="mu-input w190">
+						<button type="button" class="mu-btn"><span>인증</span></button>
+					</div>
+					<div class="input-msg">
+						<p class="input-reference" style="display:none;">이메일을 정확히 입력하여 주세요.</p>
+						<p class="input-success" style="display:block;">인증이 완료 되었습니다.</p>
+						<p class="input-warning" style="display:none;">이메일을 정확히 입력하여 주세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>신청메세지</label>
+				</div>
+				<div class="cont">
+					<textarea class="mu-area" style="height:200px;"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>가입하기</span></button>
+	</div>
+</div>
+<!-- //dialog : 회원가입 -->
+
+<!-- dialog : 정보 수정 -->
+<div class="mu-dialog" style="top:100px;left:700px;width:527px;">
+	<div class="mu-dialog-head">
+		<span class="title">정보 수정</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-formbox">
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">아이디</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input w190" value="honggil" readonly="readonly">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">비밀번호</label>
+				</div>
+				<div class="cont">
+					<input type="password" class="mu-input w190" placeholder="비밀번호">
+					<div class="input-msg">
+						<p class="input-reference" style="display:block;">비밀번호는 8~16자의 영문 대소문자, 숫자 및 특수문자를 사용하세요.</p>
+						<p class="input-warning" style="display:none;">비밀번호는 8~16자의 영문 대소문자, 숫자 및 특수문자를 사용하세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">비밀번호 확인</label>
+				</div>
+				<div class="cont">
+					<input type="password" class="mu-input w190" placeholder="비밀번호 확인">
+					<div class="input-msg">
+						<p class="input-reference" style="display:none;">비밀번호를 한번 더 입력하여 주세요.</p>
+						<p class="input-success" style="display:none;">비밀번호가 일치합니다.</p>
+						<p class="input-warning" style="display:block;">비밀번호가 일치하지 않습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>이름</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input w190" value="홍길동" readonly="readonly">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>연락처</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input w190">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>소속</label>
+				</div>
+				<div class="cont">
+					<div class="mu-item-group">
+						<input type="text" class="mu-input w190">
+						<button type="button" class="mu-btn"><span>선택하기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label class="req">E-mail</label>
+				</div>
+				<div class="cont">
+					<div class="mu-item-group">
+						<input type="text" class="mu-input w190">
+						<button type="button" class="mu-btn"><span>인증</span></button>
+					</div>
+					<div class="input-msg">
+						<p class="input-reference" style="display:none;">이메일을 정확히 입력하여 주세요.</p>
+						<p class="input-success" style="display:block;">인증이 완료 되었습니다.</p>
+						<p class="input-warning" style="display:none;">이메일을 정확히 입력하여 주세요.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>수정</span></button>
+	</div>
+</div>
+<!-- //dialog : 정보 수정 -->
+
+
+<!-- dialog : alert -->
+<div class="mu-dialog alert-wrap" style="top:100px; left:1255px; width:350px;">
+	<div class="mu-dialog-head">
+		<span class="title">알림</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="alert-comment">나의 분석 / 서비스 에 추가 되었습니다</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn mu-btn-primary"><span>확인</span></button>
+	</div>
+</div>
+<!-- //dialog : alert -->
+
+
+<!-- dialog : 비밀번호 확인 -->
+<div class="mu-dialog" style="top:650px;left:700px;width:310px;">
+	<div class="mu-dialog-head">
+		<span class="title">비밀번호 확인</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="mu-item-group">
+				<label>비밀번호 : </label>
+				<input type="password" class="mu-input w140" placeholder="비밀번호">
+				<button type="button" class="mu-btn mu-btn-primary w60"><span>확인</span></button>
+			</div>
+			<div class="input-msg">
+				<p class="input-warning" style="display:block;">비밀번호가 일치하지 않습니다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //dialog : 비밀번호 확인 -->
+
+<!-- dialog : 데이터 / 수집 제공 요청 -->
+<div class="mu-dialog" style="top:850px;left:50px;width:850px;">
+	<div class="mu-dialog-head">
+		<span class="title">데이터 / 수집 제공 요청</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-formbox">
+			<div class="mu-formbox-row">
+				<div class="title">
+				</div>
+				<div class="cont">
+					<p class="mu-formbox-title">특정 시스템에 존재하는 데이터를 정기적으로 IRIS 로 적재하여 지속적으로 활용하고자 하는 경우, 수집대상 데이터 신규 또는 변경에 대한 요청</p>
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>제목</label>
+				</div>
+				<div class="cont">
+					<input type="text" class="mu-input mu-input-lg" placeholder="제목을 입력하세요.">
+				</div>
+			</div>
+			<div class="mu-formbox-row">
+				<div class="title">
+					<label>내용</label>
+				</div>
+				<div class="cont">
+					<textarea class="mu-area" style="height:280px;">
+1. 
+2. 
+3. 
+4. 
+5. 
+					</textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>확인</span></button>
+	</div>
+</div>
+<!-- //dialog : 데이터 / 수집 제공 요청 -->
+
+<!-- dialog : 내 정보 -->
+<div class="mu-dialog" style="top:850px;left:950px;width:527px;">
+	<div class="mu-dialog-head">
+		<span class="title">내 정보</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="profile">
+				<div class="user-image">
+					<div class="user-image-thumb">
+						<img src="../images/common/photo_sample.jpg" width="100%" height="100%">
+						<input type="file" class="mu-btn-hide"> <!-- image file attach -->
+					</div>
+					<button type="button" class="mu-btn w60"><span>삭제</span></button>
+				</div>
+				<div class="user-info">
+					<dl>
+						<dt>ID</dt>
+						<dd>honggil</dd>
+					</dl>
+					<dl>
+						<dt>이름</dt>
+						<dd>홍길동</dd>
+					</dl>
+					<dl>
+						<dt>소속</dt>
+						<dd>ABC / DEF팀</dd>
+					</dl>
+					<dl>
+						<dt>최근 접속일</dt>
+						<dd>202-05-11 11:23:52</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>확인</span></button>
+	</div>
+</div>
+<!-- //dialog : 내 정보 -->
+
+<!-- dialog : tree -->
+<div class="mu-dialog" style="top:1400px; left:50px; width:527px;">
+	<div class="mu-dialog-head">
+		<span class="title">검토 부서 선택</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+				<div class="sub-title">조직 선택</div>
+				<div class="inner-cell">
+					<ul class="ztree treeDemo"></ul>
+				</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>수정</span></button>
+	</div>
+</div>
+<!-- //dialog : tree -->
+
+<!-- dialog : tree -->
+<div class="mu-dialog" style="top:1400px; left:650px; width:527px;">
+	<div class="mu-dialog-head">
+		<span class="title">승인자 선택</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="mu-dialog-cont-inner">
+				<div class="sub-title">조직 선택</div>
+				<div class="inner-cell">
+					<ul class="ztree treeDemo"></ul>
+				</div>
+			</div>
+			<div class="mu-dialog-cont-inner">
+				<div class="sub-title">담당자 선택</div>
+				<div class="inner-cell">
+					grid
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>수정</span></button>
+	</div>
+</div>
+<!-- //dialog : tree -->
+
+<!-- dialog : 보고서 상세  -->
+<div class="mu-dialog" style="top:1950px; left:50px; width:800px;">
+	<div class="mu-dialog-head">
+		<span class="title">지능형 CCTV AI기반 교통 예측 시스템</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="button-wrap button-wrap-top tr">
+				<button type="button" class="mu-btn">
+					<span>수정</span>
+				</button>
+				<button type="button" class="mu-btn">
+					<span>삭제</span>
+				</button>
+			</div>
+			<div class="board_head">
+				<!-- 썸네일 있을때만 사용 -->
+				<div class="thumb">
+					<img class="img" src="../images/common/bg_sample01.png" width="100%" height="100%" alt="">
+				</div>
+				<!-- //썸네일 있을때만 사용 -->
+				<div class="subject">
+					<span class="status bg-purple">서비스</span>
+					<div class="title">교통시설물 설치 운영 최적화 예측 모델 GIS교통시설물 설치 운영 최적화 예측 모델 GIS교통시설물 설치 운영 최적화 예측 모델 GIS</div>
+					<div class="sub-title">주변장애물 정보</div>
+					<div class="bt-area">
+						<span class="tag">국토도시</span>
+						<span class="tag">IRIS</span>
+						<i class="bookmark active"><span>즐겨찾기</span></i>
+					</div>
+				</div>
+			</div>
+			<div class="board_body">
+				<p>1. Interface 요청 유형 : </p>
+				<p>차선이탈 경고 ( LDW ) 일일 단위 수집 </p><br>
+				<p>2.연계대상 시스템</p>
+				<p>-d_psn.pdsn_ldw_ss_ptas_cell_conn_1d<br>
+				-d_psn.pdsn_ldw_ss_ptas_usage_tot_1d<br>
+				-d_psn.pdsn_ldw_ss_ptas_path_rssi_1d</p><br>
+				<p>3.요청목적</p>
+				<p>수도건 교통사고 차선이탈 율 통계 수집</p><br>
+				<p>4.대상항목 정의</p>
+				<p>-d_psn.pdsn_ldw_ss_ptas_cell_conn_1d<br>
+				-d_psn.pdsn_ldw_ss_ptas_usage_tot_1d<br>
+				-d_psn.pdsn_ldw_ss_ptas_path_rssi_1d</p><br>
+				<p>
+			</div>
+		</div>
+	</div>
+	<div class="mu-dialog-foot">
+		<button type="button" class="mu-btn"><span>취소</span></button>
+		<button type="button" class="mu-btn mu-btn-primary"><span>해당 보고서 실행</span></button>
+	</div>
+</div>
+<!-- //dialog : 보고서 상세 -->
+
+<!-- dialog : 데이터 카탈로그 - 테이블 상세  -->
+<div class="mu-dialog" style="top:2750px; left:50px; width:1200px;">
+	<div class="mu-dialog-head">
+		<span class="title">테이블 상세</span>
+		<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+	</div>
+	<div class="mu-dialog-body">
+		<div class="mu-dialog-cont">
+			<div class="info-wrap">
+				<ul>
+					<li>
+						<dl>
+							<dt>시스템명</dt>
+							<dd>COTIS</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>상위주제영역</dt>
+							<dd>COTIS 건설관리</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>주제영역</dt>
+							<dd>PC012_건설관리_검사관리</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>테이블영문명</dt>
+							<dd><strong>TB_CCM_ADTG_PRT_BHD_D</strong></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>테이블한글명</dt>
+							<dd><strong>CCM_검사부분총괄표상세</strong></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>설명</dt>
+							<dd>검사부분총괄표상세 관리 정보 입니다.</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+
+			<div class="grid-wrap">
+				<h5>컬럼정보</h5>
+				<div class="grid" style="height:200px;">
+					<div id="agGrid" class="ag-theme-balham" style="width:100%;height:100%;"></div>
+				</div>
+			</div>
+
+			<div class="grid-wrap">
+				<h5>샘플데이터</h5>
+				<div class="grid" style="height:200px;">
+					<div id="agGrid2" class="ag-theme-balham" style="width:100%;height:100%;"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- //dialog : 데이터 카탈로그 - 테이블 상세 -->
+
+</section>
+			</main>
+			<footer>
+				<div class="footer">
+					<div class="footer-inner">
+						<div class="logo-area">
+							<div class="logo01"><span>Mobigen</span></div>
+							<div class="logo02"><span>IRIS</span></div>
+						</div>
+						<div class="info-area">
+							<address class="address">본사 (05854) 서울특별시 송파구 법원로 128, C동 16층(문정동, SKV1 GL메트로시티)</address>
+							<div class="tel">
+								<span>TEL 02-538-9360</span>
+								<span>FAX 02-538-9369</span>
+							</div>
+							<p class="copy">Copyright ⓒ 2020 MOBIGEN Co., Ltd. All rights reserved. </p>
+						</div>
+						<ul class="terms-area">
+							<li><a href="#">개인정보 처리 방침</a></li>
+							<li><a href="#">이용약관</a></li>
+						</ul>
+					</div>
+				</div>
+            </footer>
+		</div>
+
+		<!-- <script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script> -->
+		<script src="../js/prefixfree.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script>
+		
+			var columnDefs = [
+				{headerName: "카테고리", field: "cl1", cellClass: "tc"},
+				{headerName: "제목", field: "cl2", width: 600, cellRenderer: 'link'},
+				{headerName: "등록자", field: "cl3", cellClass: "tc"},
+				{headerName: "등록일", field: "cl4", cellClass: "tc"},
+				{headerName: "조회", field: "cl5", cellClass: "tc", width: 100}
+			];
+			
+			var rowData = [
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"}
+			];
+			
+			var gridOptions = {
+				columnDefs: columnDefs,
+				rowData: rowData,
+				headerHeight: 40,
+				rowHeight: 38,
+				onGridReady: function (event) {
+					event.api.sizeColumnsToFit();
+				},
+				components: {
+					link: function (params) {
+						let flag = '<a href="#">적응형 주행 제어 ( ACC ) 전방차량 근첩 횟수 5분 통계 수집 요청</a>';
+						return flag;
+					}
+				},
+				onGridSizeChanged: function (event) {
+					event.api.sizeColumnsToFit();
+				}
+			};
+
+			let eGridDiv = document.querySelector('#agGrid');
+			new agGrid.Grid(eGridDiv, gridOptions);
+
+			let eGridDiv2 = document.querySelector('#agGrid2');
+			new agGrid.Grid(eGridDiv2, gridOptions);
+
+		</script>
+	</body>
+</html>

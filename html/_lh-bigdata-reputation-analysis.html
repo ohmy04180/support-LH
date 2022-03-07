@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>`
+		<![endif]-->
+  <!-- <link href="../css/reset.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/common.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/style.css" rel="stylesheet" /> -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../css/_lh-bigdata.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrap">
+    <main>
+      <div class="main">
+        <div class="guidance-wrap">
+          <h2 class="guidance-wrap__title">
+            온라인 평판분석
+          </h2>
+          <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link">depth1</a>
+              </li>
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link breadcrumb-list__link--active">depth1</a>
+              </li>
+            </ol>
+          </div>
+          <ul class="tab-list">
+            <li class="tab-list__item tab-list__item--selected" data-tab="first">
+              <button type="button" class="tab-list__button">
+                매체별 반응
+              </button>
+            </li>
+            <li class="tab-list__item" data-tab="second">
+              <button type="button" class="tab-list__button">
+                언론 영향도
+              </button>
+            </li>
+            <li class="tab-list__item" data-tab="third">
+              <button type="button" class="tab-list__button">
+                비교분석
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="content-wrap tab-content-wrap tab-content-wrap--response tab-content-wrap--show" id="first">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    키워드
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--list">
+                  <div class="select-layer__body">
+                    <ul class="select-layer-list">
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          한국토지주택공사
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          3기 신도시
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          수도권 주택공금
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          임대주택
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          주거복지
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          토지보상
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          분양전환
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="키워드를 입력하세요." class="text-form__input">
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">매체선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    매채별
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--list">
+                  <div class="select-layer__body">
+                    <ul class="select-layer-list">
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          한국토지주택공사
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          3기 신도시
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          수도권 주택공금
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          임대주택
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          주거복지
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          토지보상
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          분양전환
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <strong class="search-area__title">기간선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    기간
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--period">
+                  <div class="select-layer__body">
+
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            전체
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            1주일
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            3개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            6개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1년
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datepicker-group">
+                      <button type="button" class="group-list__link">
+                        기간별
+                      </button>
+                      <div class="datepicker-form">
+                        <input id="dt1" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt1" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                      <div class="datepicker-form">
+                        <input id="dt2" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt2" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+            <span class="search-area__guidance-text">
+              <em class="text-necessary">*</em>
+              필수항목
+            </span>
+          </div>
+          <div class="result-area">
+            <strong class="result-area__text">
+              검색어
+              <em class="text-emphasis color--emphasis">'키워드'</em>에 대한
+              <em class="text-emphasis">1,265,082건</em>
+              의 검색 결과를 찾았습니다.
+            </strong>
+            <div class="result-area__chart-content">
+              <div class="chart-content">
+                <strong class="chart-content__title">
+                  뉴스기사 현황
+                </strong>
+                <div class="chart-content__sub-group">
+                  <span class="chart-content__text">
+                    기준일: 2020-11-20 ~ 2020-11-26
+                  </span>
+                  <div class="setting-group">
+                    <button type="button" class="button button--spare">
+                      CVG
+                    </button>
+                    <button type="button" class="button button--spare">
+                      img
+                    </button>
+                  </div>
+                </div>
+                <!-- 임시 chart-sample -->
+                <div class="chart-sample"></div>
+              </div>
+              <div class="chart-content">
+                <strong class="chart-content__title">
+                  긍정 부정 뉴스기사 현황
+                </strong>
+                <div class="chart-content__sub-group">
+                  <span class="chart-content__text">
+                    기준일: 2020-11-20 ~ 2020-11-26
+                  </span>
+                  <div class="setting-group">
+                    <button type="button" class="button button--spare">
+                      CVG
+                    </button>
+                    <button type="button" class="button button--spare">
+                      img
+                    </button>
+                  </div>
+                </div>
+                <!-- 임시 chart-sample -->
+                <div class="chart-sample"></div>
+              </div>
+            </div>
+            <div class="result-area__article-content">
+              <div class="setting-group">
+                <div class="select-form">
+                  <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                  <button type="button" class="select-form__toggle-button">
+                    <span class="select-form__text">
+                      10개씩 보기
+                    </span>
+                    <span class="select-form__icon"></span>
+                  </button>
+                  <div class="select-layer select-layer--radio-form">
+                    <div class="select-layer__body">
+                      <ul class="select-layer__list">
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd1" class="radio-form__input" name="inp1">
+                            <label for="rd1" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">10개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd2" class="radio-form__input" name="inp1">
+                            <label for="rd2" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">20개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd3" class="radio-form__input" name="inp1">
+                            <label for="rd3" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">30개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="select-layer__footer">
+                      <button class="button button--primary">
+                        적용
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="button button--secondary">
+                  <span class="icon-common icon-excel"></span>
+                  다운로드
+                </button>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스 기사</strong>
+                  <span class="article-content__text">(587,463)</span>
+                </div>
+                <!-- 임시 article-sample -->
+                <div class="article-sample"></div>
+              </div>
+              <div class="pagination">
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow-more">
+                    <span class="text-image-replacement">10개 이전으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow">
+                    <span class="text-image-replacement">바로 이전으로</span>
+                  </span>
+                </button>
+                <ol class="pagination-list">
+                  <li class="pagination-list__item">
+                    <!-- 2020-12-21 pagination-list__link--active class 추가 시 활성화 -->
+                    <a class="pagination-list__link pagination-list__link--active" href="#">
+                      1
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      4
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      5
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      6
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      7
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      8
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      9
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      10
+                    </a>
+                  </li>
+                </ol>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow">
+                    <span class="text-image-replacement">바로 다음으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow-more">
+                    <span class="text-image-replacement">10개 다음으로</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrap tab-content-wrap tab-content-wrap--influence" id="second">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    키워드
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--list">
+                  <div class="select-layer__body">
+                    <ul class="select-layer-list">
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          한국토지주택공사
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          3기 신도시
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          수도권 주택공금
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          임대주택
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          주거복지
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          토지보상
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          분양전환
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="키워드를 입력하세요." class="text-form__input">
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">언론선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    언론사
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--group-list">
+                  <div class="select-layer__header">
+                    <strong class="select-layer__title">언론사</strong>
+                    <div class="checkbox-form">
+                      <input type="checkbox" id="search2" class="checkbox-form__input" name="all">
+                      <label for="search2" class="checkbox-form__label">
+                        <span class="checkbox-form__checkbox-icon icon-check"></span>
+                        <span class="checkbox-form__text">전체선택</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="select-layer__body">
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="seoul" class="checkbox-form__input">
+                        <label for="seoul" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">서울</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search4" class="checkbox-form__input">
+                        <label for="search4" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">경기</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search3" class="checkbox-form__input">
+                        <label for="search3" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">강원</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <strong class="search-area__title">기간선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    기간
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--period">
+                  <div class="select-layer__body">
+
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            전체
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            1주일
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            3개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            6개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1년
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datepicker-group">
+                      <button type="button" class="group-list__link">
+                        기간별
+                      </button>
+                      <div class="datepicker-form">
+                        <input id="dt1" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt1" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                      <div class="datepicker-form">
+                        <input id="dt2" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt2" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+            <span class="search-area__guidance-text">
+              <em class="text-necessary">*</em>
+              필수항목
+            </span>
+          </div>
+          <div class="result-area">
+            <strong class="result-area__text">
+              검색어
+              <em class="text-emphasis color--emphasis">'키워드'</em>에 대한
+              <em class="text-emphasis">1,265,082건</em>
+              의 검색 결과를 찾았습니다.
+            </strong>
+            <div class="result-area__chart-content">
+              <div class="chart-content">
+                <strong class="chart-content__title">
+                  뉴스기사 현황
+                </strong>
+                <div class="chart-content__sub-group">
+                  <span class="chart-content__text">
+                    기준일: 2020-11-20 ~ 2020-11-26
+                  </span>
+                  <div class="setting-group">
+                    <button type="button" class="button button--spare">
+                      CVG
+                    </button>
+                    <button type="button" class="button button--spare">
+                      img
+                    </button>
+                  </div>
+                </div>
+                <!-- 임시 chart-sample -->
+                <div class="chart-sample"></div>
+              </div>
+              <div class="chart-content">
+                <strong class="chart-content__title">
+                  긍정 부정 비교
+                </strong>
+                <div class="chart-content__sub-group">
+                  <span class="chart-content__text chart-content__text--emphasis">
+                    한국토지주택공사
+                  </span>
+                </div>
+                <!-- 임시 chart-sample -->
+                <div class="chart-sample"></div>
+              </div>
+            </div>
+            <div class="result-area__article-content">
+              <div class="setting-group">
+                <div class="select-form">
+                  <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                  <button type="button" class="select-form__toggle-button">
+                    <span class="select-form__text">
+                      10개씩 보기
+                    </span>
+                    <span class="select-form__icon"></span>
+                  </button>
+                  <div class="select-layer select-layer--radio-form">
+                    <div class="select-layer__body">
+                      <ul class="select-layer__list">
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd4" class="radio-form__input" name="inp1">
+                            <label for="rd4" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">10개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd5" class="radio-form__input" name="inp1">
+                            <label for="rd5" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">20개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd6" class="radio-form__input" name="inp1">
+                            <label for="rd6" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">30개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="select-layer__footer">
+                      <button class="button button--primary">
+                        적용
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="button button--secondary">
+                  <span class="icon-common icon-excel"></span>
+                  다운로드
+                </button>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">
+                    <em class="text-emphasis color--emphasis">키워드</em>를 포함한 뉴스</strong>
+                  <span class="article-content__text">(587,463)</span>
+                </div>
+                <!-- 임시 article-sample -->
+                <div class="article-sample"></div>
+              </div>
+              <div class="pagination">
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow-more">
+                    <span class="text-image-replacement">10개 이전으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow">
+                    <span class="text-image-replacement">바로 이전으로</span>
+                  </span>
+                </button>
+                <ol class="pagination-list">
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      1
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      4
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      5
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      6
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      7
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      8
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      9
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      10
+                    </a>
+                  </li>
+                </ol>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow">
+                    <span class="text-image-replacement">바로 다음으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow-more">
+                    <span class="text-image-replacement">10개 다음으로</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrap tab-content-wrap tab-content-wrap--compare" id="third">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="키워드를 입력하세요." class="text-form__input">
+              </div>
+              <strong class="search-area__title">VS</strong>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="키워드를 입력하세요." class="text-form__input">
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">매체선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    매채별
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--list">
+                  <div class="select-layer__body">
+                    <ul class="select-layer-list">
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          한국토지주택공사
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          3기 신도시
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          수도권 주택공금
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          임대주택
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          주거복지
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          토지보상
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          분양전환
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          도시재생
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          스마트 시티
+                        </button>
+                      </li>
+                      <li class="select-layer-list__item">
+                        <button type="button" class="select-layer-list__button">
+                          전세대책
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <strong class="search-area__title">기간선택<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    기간
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--period">
+                  <div class="select-layer__body">
+
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            전체
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            1주일
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            3개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            6개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1년
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datepicker-group">
+                      <button type="button" class="group-list__link">
+                        기간별
+                      </button>
+                      <div class="datepicker-form">
+                        <input id="dt1" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt1" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                      <div class="datepicker-form">
+                        <input id="dt2" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt2" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+            <span class="search-area__guidance-text">
+              <em class="text-necessary">*</em>
+              필수항목
+            </span>
+          </div>
+          <div class="result-area">
+            <div class="result-area__chart-content">
+              <div class="chart-content">
+                <div class="chart-content__title-group">
+                  <strong class="chart-content__title">
+                    추이 비교
+                  </strong>
+                  <div class="tooltip-group">
+                    <!-- tooltip-group__toggle-button--selected 클래스 추가 시 tooltip open -->
+                    <button class="tooltip-group__toggle-button">
+                      <span class="icon-common icon-info"></span>
+                    </button>
+                    <div class="tooltip">
+                      <button class="tooltip__close-button" type="button">
+                        <span class="icon-common icon-close--dark"></span>
+                      </button>
+                      <p class="tooltip__text">- 전주 대비, 금주에 새롭게 출현한 키워드를 제공합니다.</p>
+                      <p class="tooltip__text">- 긍정 및 부정 뉴스 기사 및 SNS 게시글에서 추출한 키워드를 클라우드 형태로 제공합니다.</p>
+                    </div>
+                  </div>
+                  <strong class="chart-content__title">
+                    : 한국토지주택공사 vs 3기신도시 (매체명)
+                  </strong>
+                </div>
+                <div class="chart-content__sub-group">
+                  <span class="chart-content__text">
+                    기준일: 2020-11-20 ~ 2020-11-26
+                  </span>
+                  <div class="setting-group">
+                    <button type="button" class="button button--spare">
+                      CVG
+                    </button>
+                    <button type="button" class="button button--spare">
+                      img
+                    </button>
+                  </div>
+                </div>
+                <!-- 임시 chart-sample -->
+                <div class="chart-sample"></div>
+              </div>
+              <div class="chart-content">
+                <strong class="chart-content__title">
+                  연관 네트워크 비교 : 한국토지주택공사 vs 3기신도시
+                </strong>
+                <div class="chart-content__group">
+                  <div class="ranking-content">
+                    <strong class="ranking-content__title">
+                      한국토지주택공사
+                    </strong>
+                    <div class="ranking-group">
+                      <div class="ranking-group__subject">
+                        <strong class="ranking-group__text">순위</strong>
+                        <strong class="ranking-group__text">연관어</strong>
+                      </div>
+                      <ol class="ranking-list">
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">1</strong>
+                          <a href="#" class="ranking-list__link">LH</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">2</strong>
+                          <a href="#" class="ranking-list__link">임대주택</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">3</strong>
+                          <a href="#" class="ranking-list__link">전세임대</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">4</strong>
+                          <a href="#" class="ranking-list__link">행복주택</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">5</strong>
+                          <a href="#" class="ranking-list__link">서울지역본부</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">6</strong>
+                          <a href="#" class="ranking-list__link">임대아파트</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">7</strong>
+                          <a href="#" class="ranking-list__link">lh주택공사</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">8</strong>
+                          <a href="#" class="ranking-list__link">민간사업자</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">9</strong>
+                          <a href="#" class="ranking-list__link">재건축</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">10</strong>
+                          <a href="#" class="ranking-list__link">청년</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">11</strong>
+                          <a href="#" class="ranking-list__link">주택사업</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">12</strong>
+                          <a href="#" class="ranking-list__link">스마트시티</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">13</strong>
+                          <a href="#" class="ranking-list__link">도시</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">14</strong>
+                          <a href="#" class="ranking-list__link">재생</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">15</strong>
+                          <a href="#" class="ranking-list__link">뉴딜</a>
+                        </li>
+                      </ol>
+                    </div>
+                    <span class="ranking-content__text">
+                      전반적으로
+                      <em class="text-emphasis-background">긍정적</em>
+                      이미지 입니다.
+                    </span>
+                  </div>
+                  <div class="chart-group__group-box">
+                    <div class="chart-content__sub-group">
+                      <div class="setting-group">
+                        <button type="button" class="button button--spare">
+                          CVG
+                        </button>
+                        <button type="button" class="button button--spare">
+                          img
+                        </button>
+                      </div>
+                    </div>
+                    <!-- 임시 chart-sample -->
+                    <div class="chart-sample"></div>
+                    <!-- 임시 chart-sample -->
+                    <div class="chart-sample"></div>
+                  </div>
+                  <div class="ranking-content">
+                    <strong class="ranking-content__title">
+                      3기 신도시
+                    </strong>
+                    <div class="ranking-group">
+                      <div class="ranking-group__subject">
+                        <strong class="ranking-group__text">순위</strong>
+                        <strong class="ranking-group__text">연관어</strong>
+                      </div>
+                      <ol class="ranking-list">
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">1</strong>
+                          <a href="#" class="ranking-list__link">신도시</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">2</strong>
+                          <a href="#" class="ranking-list__link">고분양가</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">3</strong>
+                          <a href="#" class="ranking-list__link">수도권외곽</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">4</strong>
+                          <a href="#" class="ranking-list__link">부동산</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">5</strong>
+                          <a href="#" class="ranking-list__link">서울지역본부</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">6</strong>
+                          <a href="#" class="ranking-list__link">임대아파트</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">7</strong>
+                          <a href="#" class="ranking-list__link">lh주택공사</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">8</strong>
+                          <a href="#" class="ranking-list__link">민간사업자</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">9</strong>
+                          <a href="#" class="ranking-list__link">재건축</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">10</strong>
+                          <a href="#" class="ranking-list__link">청년</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">11</strong>
+                          <a href="#" class="ranking-list__link">주택사업</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">12</strong>
+                          <a href="#" class="ranking-list__link">스마트시티</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">13</strong>
+                          <a href="#" class="ranking-list__link">도시</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">14</strong>
+                          <a href="#" class="ranking-list__link">재생</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">15</strong>
+                          <a href="#" class="ranking-list__link">뉴딜</a>
+                        </li>
+                      </ol>
+                    </div>
+                    <span class="ranking-content__text">
+                      전반적으로
+                      <em class="text-emphasis-background background-emphasis--nagative">부정적</em>
+                      이미지 입니다.
+                    </span>
+                  </div>
+                </div>
+                <span class="search-area__guidance-text">
+                  <em class="text-necessary">*</em>
+                  해당 키워드를 클릭시 상세 데이터를 조회할 수 있습니다.
+                </span>
+              </div>
+            </div>
+            <div class="result-area__article-content">
+              <div class="setting-group">
+                <div class="select-form">
+                  <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                  <button type="button" class="select-form__toggle-button">
+                    <span class="select-form__text">
+                      10개씩 보기
+                    </span>
+                    <span class="select-form__icon"></span>
+                  </button>
+                  <div class="select-layer select-layer--radio-form">
+                    <div class="select-layer__body">
+                      <ul class="select-layer__list">
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd1" class="radio-form__input" name="inp1">
+                            <label for="rd1" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">10개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd2" class="radio-form__input" name="inp1">
+                            <label for="rd2" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">20개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd3" class="radio-form__input" name="inp1">
+                            <label for="rd3" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">30개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="select-layer__footer">
+                      <button class="button button--primary">
+                        적용
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="button button--secondary">
+                  <span class="icon-common icon-excel"></span>
+                  다운로드
+                </button>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스 기사</strong>
+                  <span class="article-content__text">(587,463)</span>
+                </div>
+                <!-- 임시 article-sample -->
+                <div class="article-sample"></div>
+              </div>
+              <div class="pagination">
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow-more">
+                    <span class="text-image-replacement">10개 이전으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow">
+                    <span class="text-image-replacement">바로 이전으로</span>
+                  </span>
+                </button>
+                <ol class="pagination-list">
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      1
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      4
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      5
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      6
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      7
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      8
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      9
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      10
+                    </a>
+                  </li>
+                </ol>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow">
+                    <span class="text-image-replacement">바로 다음으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow-more">
+                    <span class="text-image-replacement">10개 다음으로</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="go-top-button" type="button">
+          <span class="icon-common icon-go-top">
+            <span class="text-image-replacement">가장 위로이동</span>
+          </span>
+        </button>
+      </div>
+
+    </main>
+
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/prefixfree.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script>
+    // 임시 스크립트 추가
+    const tooltipGroupToggleButton = document.querySelector(".tooltip-group__toggle-button");
+    const tooltipGroupToggleButtonSelected = "tooltip-group__toggle-button--selected";
+    const tooltipCloseButton = document.querySelector(".tooltip__close-button");
+    const selectFormToggleButton = document.querySelectorAll(".select-form__toggle-button");
+    const selectFormToggleButtonSelected = "select-form__toggle-button--selected";
+    const buttonGoTop = document.querySelector(".go-top-button");
+    const tabListItem = document.querySelectorAll(".tab-list__item");
+    const tabContentWrap = document.querySelectorAll(".tab-content-wrap")
+
+    function tooltipToggleActive() {
+      tooltipGroupToggleButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        console.log("tooltip group button clicked");
+        tooltipGroupToggleButton.classList.add(tooltipGroupToggleButtonSelected)
+      });
+
+      tooltipCloseButton.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        tooltipGroupToggleButton.classList.remove(tooltipGroupToggleButtonSelected)
+      })
+    }
+
+    function moveTabActive() {
+
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+
+      tabListItem.forEach(function (i) {
+        i.addEventListener('click', function (i) {
+          i.preventDefault();
+          console.log(i);
+
+          let tabTarget = i.currentTarget;
+          console.log(tabTarget);
+
+          let tabNum = tabTarget.dataset.tab;
+          console.log(tabNum);
+
+          tabContentWrap.forEach(function (i) {
+            i.classList.remove("tab-content-wrap--show");
+          });
+
+          tabListItem.forEach(function (i) {
+            i.classList.remove("tab-list__item--selected");
+          });
+
+          document.querySelector("#" + tabNum).classList.add("tab-content-wrap--show");
+
+          tabTarget.classList.add("tab-list__item--selected");
+
+        })
+      })
+    }
+
+    function goTopButtonActive() {
+      buttonGoTop.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      })
+    }
+
+    function toggleButtonActive() {
+      
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+
+      selectFormToggleButton.forEach(function (i) {
+        // console.log(i);
+        i.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          console.log("clicked");
+          i.classList.toggle(selectFormToggleButtonSelected)
+        })
+      })
+    }
+
+    function init() {
+      tooltipToggleActive();
+      toggleButtonActive();
+      goTopButtonActive();
+      moveTabActive();
+    }
+
+    init()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>`
+		<![endif]-->
+  <!-- <link href="../css/reset.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/common.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/style.css" rel="stylesheet" /> -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../css/_lh-bigdata.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrap">
+    <main>
+      <div class="main">
+        <div class="guidance-wrap">
+          <h2 class="guidance-wrap__title">
+            연관 검색
+          </h2>
+          <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link">depth1</a>
+              </li>
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link breadcrumb-list__link--active">depth1</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-wrap association-search-wrap">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="키워드를 입력하세요." class="text-form__input">
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">기간<em class="text-necessary">*</em></strong>
+              <div class="group-list group-list--sm">
+                <div class="group-list__inner">
+                  <div class="group-list__item">
+                    <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                    <a href="#" class="group-list__link">
+                      전체
+                    </a>
+                    <a href="#" class="group-list__link group-list__link--selected">
+                      1주일
+                    </a>
+                    <a href="#" class="group-list__link">
+                      1개월
+                    </a>
+                    <a href="#" class="group-list__link">
+                      3개월
+                    </a>
+                    <a href="#" class="group-list__link">
+                      6개월
+                    </a>
+                    <a href="#" class="group-list__link">
+                      1년
+                    </a>
+                    <a href="#" class="group-list__link">
+                      기간별
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="datepicker-group">
+                <div class="datepicker-form">
+                  <input id="dt1" type="text" class="datepicker-form__input datepicker hasDatepicker"
+                    readonly="readonly">
+                  <label for="dt1" class="datepicker-form__label">
+                    <span class="datepicker-form__icon icon-calender"></span>
+                  </label>
+                </div>
+                <div class="datepicker-form">
+                  <input id="dt2" type="text" class="datepicker-form__input datepicker hasDatepicker"
+                    readonly="readonly">
+                  <label for="dt2" class="datepicker-form__label">
+                    <span class="datepicker-form__icon icon-calender"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result-area">
+            <strong class="result-area__text">
+              검색어<em class="text-emphasis color--emphasis">'키워드'</em>에 대한 총
+              <em class="text-emphasis">1,265,082건</em>
+              의 검색 결과를 찾았습니다.
+            </strong>
+            <div class="result-area__chart-content">
+              <div class="chart-content">
+                <div class="chart-content__group">
+                  <div class="chart-group__group-box">
+                    <div class="chart-content__sub-group">
+                      <strong class="chart-content__title">
+                        연관 네트워크 차트
+                      </strong>
+                      <div class="setting-group">
+                        <button type="button" class="button button--spare">
+                          CVG
+                        </button>
+                        <button type="button" class="button button--spare">
+                          img
+                        </button>
+                      </div>
+                    </div>
+                    <!-- 임시 chart-sample -->
+                    <div class="chart-sample"></div>
+                  </div>
+                  <div class="ranking-content">
+                    <strong class="ranking-content__title">
+                      연관 검색어 순위
+                    </strong>
+                    <div class="ranking-group">
+                      <div class="ranking-group__subject">
+                        <strong class="ranking-group__text">순위</strong>
+                        <strong class="ranking-group__text">연관어</strong>
+                      </div>
+                      <ol class="ranking-list">
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">1</strong>
+                          <a href="#" class="ranking-list__link">신도시</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">2</strong>
+                          <a href="#" class="ranking-list__link">고분양가</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">3</strong>
+                          <a href="#" class="ranking-list__link">수도권외곽</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">4</strong>
+                          <a href="#" class="ranking-list__link">부동산</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">5</strong>
+                          <a href="#" class="ranking-list__link">서울지역본부</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">6</strong>
+                          <a href="#" class="ranking-list__link">임대아파트</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">7</strong>
+                          <a href="#" class="ranking-list__link">lh주택공사</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">8</strong>
+                          <a href="#" class="ranking-list__link">민간사업자</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">9</strong>
+                          <a href="#" class="ranking-list__link">재건축</a>
+                        </li>
+                        <li class="ranking-list__item">
+                          <strong class="ranking-list__number">10</strong>
+                          <a href="#" class="ranking-list__link">청년</a>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="sub-tab-list">
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  전체
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  뉴스기사
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  뉴스댓글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  카페 게시글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  카페댓글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item sub-tab-list__item--selected">
+                <button type="button" class="sub-tab-list__button">
+                  블로그
+                </button>
+              </li>
+            </ul>
+            <div class="result-area__article-content">
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-refresh"></span>
+                  새로고침
+                </button>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스 기사</strong>
+                  <span class="article-content__text">(587,463)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시 </em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를
+                      경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시 </em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      [이슈& 직설] 홍남기도 묘안 없는 '전세 대란'…1800:1까지 치솟은 청약 경쟁률, <em class="text-emphasis color--emphasis">3기
+                        신도시</em>가 대안 될까
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스댓글</strong>
+                  <span class="article-content__text">(365,871)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시</em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시</em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">카페 게시글</strong>
+                  <span class="article-content__text">(87,463)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시 </em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를
+                      경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시 </em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      [이슈& 직설] 홍남기도 묘안 없는 '전세 대란'…1800:1까지 치솟은 청약 경쟁률, <em class="text-emphasis color--emphasis">3기
+                        신도시</em>가 대안 될까
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">카페댓글</strong>
+                  <span class="article-content__text">(1,236,871)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시</em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시</em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="go-top-button" type="button">
+          <span class="icon-common icon-go-top">
+            <span class="text-image-replacement">가장 위로이동</span>
+          </span>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/prefixfree.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script>
+    // 임시 스크립트 추가
+    const selectFormToggleButton = document.querySelectorAll(".select-form__toggle-button");
+    const selectFormToggleButtonSelected = "select-form__toggle-button--selected";
+    const buttonGoTop = document.querySelector(".go-top-button");
+
+    function goTopButtonActive() {
+      buttonGoTop.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      })
+    }
+
+    function toggleButtonActive() {
+
+      // console.log(selectFormToggleButton);
+      // console.log(typeof (selectFormToggleButton));
+
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+
+      selectFormToggleButton.forEach(function (i) {
+        // console.log(i);
+        i.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          console.log("clicked");
+          i.classList.toggle(selectFormToggleButtonSelected)
+        })
+      })
+    }
+
+    function init() {
+      toggleButtonActive();
+      goTopButtonActive();
+    }
+
+    init()
+  </script>
+</body>
+
+</html>

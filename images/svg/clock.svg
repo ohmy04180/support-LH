@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/clock copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.5,3 C7.25329488,3 3,7.25329488 3,12.5 C3,17.7467051 7.25329488,22 12.5,22 C17.7467051,22 22,17.7467051 22,12.5 C22,7.25329488 17.7467051,3 12.5,3 Z M12.5,5 C16.6421356,5 20,8.35786438 20,12.5 C20,16.6421356 16.6421356,20 12.5,20 C8.35786438,20 5,16.6421356 5,12.5 C5,8.35786438 8.35786438,5 12.5,5 Z M13.1538462,7 L11,7 L11,14 L18,14 L18,11.6666667 L13.1538462,11.6666667 L13.1538462,7 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/clock-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Oval" fill="#5c9c00" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

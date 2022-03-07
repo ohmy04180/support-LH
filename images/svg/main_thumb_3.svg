@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="250" viewBox="0 0 340 250">
+    <defs>
+        <rect id="3jcprs0c7a" width="340" height="250" x="0" y="0" rx="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="r8h1hhujkb" fill="#fff">
+            <use xlink:href="#3jcprs0c7a"/>
+        </mask>
+        <use fill="#FFF" xlink:href="#3jcprs0c7a"/>
+        <rect width="191" height="13" x="25" y="51" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <path fill="#A0B2D1" d="M0 -1H340V34H0z" mask="url(#r8h1hhujkb)"/>
+        <circle cx="16" cy="17" r="6" fill="#FFF" mask="url(#r8h1hhujkb)"/>
+        <rect width="291" height="66" x="25" y="71" fill="#A0B2D1" mask="url(#r8h1hhujkb)" opacity=".3" rx="1"/>
+        <circle cx="38" cy="17" r="6" fill="#FFF" mask="url(#r8h1hhujkb)"/>
+        <circle cx="60" cy="17" r="6" fill="#FFF" mask="url(#r8h1hhujkb)"/>
+        <g mask="url(#r8h1hhujkb)">
+            <g>
+                <path fill="#A0B2D1" d="M0 8.218L45.109 19.1 90.891 2 136 20.655 136 59 0 59z" opacity=".3" transform="translate(180 160)"/>
+                <path stroke="#FA6400" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M2 58L46 30.143 90 19 134 30.143" opacity=".702" transform="translate(180 160)"/>
+                <path stroke="#F7B500" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M2 35.5L45.782 52 90.218 35.5 134 0" opacity=".702" transform="translate(180 160)"/>
+                <path stroke="#6DD400" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M2 8L45.782 18.5 90.218 2 134 20" opacity=".702" transform="translate(180 160)"/>
+            </g>
+        </g>
+        <rect width="13" height="23" x="38" y="106" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="35" x="59" y="94" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="28" x="80" y="101" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="19" x="101" y="110" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="11" x="123" y="118" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="23" x="144" y="106" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="18" x="165" y="111" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="23" x="186" y="106" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="28" x="207" y="101" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="25" x="228" y="104" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="34" x="250" y="95" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="39" x="271" y="90" fill="#A0B2D1" mask="url(#r8h1hhujkb)" rx="1"/>
+        <rect width="13" height="50" x="292" y="79" fill="#7FD700" mask="url(#r8h1hhujkb)" rx="1"/>
+        <circle cx="99" cy="188" r="28" fill="#8FD900" mask="url(#r8h1hhujkb)" opacity=".6"/>
+        <circle cx="64" cy="188" r="28" fill="#A0B2D1" mask="url(#r8h1hhujkb)" opacity=".3"/>
+        <circle cx="134" cy="188" r="28" fill="#F7B500" mask="url(#r8h1hhujkb)" opacity=".6"/>
+    </g>
+</svg>

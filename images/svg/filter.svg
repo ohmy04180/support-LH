@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/filter copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M22.9338441,2 L2.06615591,2 L9.5,12.496 L9.5,23 L15.5,23 L15.5,12.494 L22.9338441,2 Z M5.934,3.999 L19.065,3.999 L13.5,11.8576995 L13.5,20.999 L11.5,20.999 L11.5,11.8576995 L5.934,3.999 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/filter-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Triangle-2" fill="#5c9c00" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

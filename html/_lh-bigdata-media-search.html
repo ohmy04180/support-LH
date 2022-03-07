@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>`
+		<![endif]-->
+  <!-- <link href="../css/reset.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/common.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/style.css" rel="stylesheet" /> -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../css/_lh-bigdata.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrap">
+    <main>
+      <div class="main">
+        <div class="guidance-wrap">
+          <h2 class="guidance-wrap__title">
+            매체별 검색
+          </h2>
+          <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link">depth1</a>
+              </li>
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link breadcrumb-list__link--active">depth1</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-wrap">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="검색어를 입력하세요." class="text-form__input">
+              </div>
+              <div class="checkbox-form">
+                <input type="checkbox" id="search1" class="checkbox-form__input">
+                <label for="search1" class="checkbox-form__label">
+                  <span class="checkbox-form__checkbox-icon icon-check"></span>
+                  <span class="checkbox-form__text">결과 내 재검색</span>
+                </label>
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">검색조건<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    검색 대상
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--radio-form">
+                  <div class="select-layer__body">
+                    <ul class="select-layer__list">
+                      <li class="select-layer__item">
+                        <div class="radio-form">
+                          <input type="radio" id="rdd1" class="radio-form__input" name="ip1">
+                          <label for="rdd1" class="radio-form__label">
+                            <span class="radio-form__radio-icon icon-radio"></span>
+                            <span class="radio-form__text">전체</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="radio-form">
+                          <input type="radio" id="rdd2" class="radio-form__input" name="ip1">
+                          <label for="rdd2" class="radio-form__label">
+                            <span class="radio-form__radio-icon icon-radio"></span>
+                            <span class="radio-form__text">제목</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="radio-form">
+                          <input type="radio" id="rdd3" class="radio-form__input" name="ip1">
+                          <label for="rdd3" class="radio-form__label">
+                            <span class="radio-form__radio-icon icon-radio"></span>
+                            <span class="radio-form__text">내용</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    언론사
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--group-list">
+                  <div class="select-layer__header">
+                    <strong class="select-layer__title">언론사</strong>
+                    <div class="checkbox-form">
+                      <input type="checkbox" id="search2" class="checkbox-form__input" name="all">
+                      <label for="search2" class="checkbox-form__label">
+                        <span class="checkbox-form__checkbox-icon icon-check"></span>
+                        <span class="checkbox-form__text">전체선택</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="select-layer__body">
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="seoul" class="checkbox-form__input">
+                        <label for="seoul" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">서울</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search4" class="checkbox-form__input">
+                        <label for="search4" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">경기</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search3" class="checkbox-form__input">
+                        <label for="search3" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">강원</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    상세 키워드
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--text-form">
+                  <div class="select-layer__body">
+                    <ul class="select-layer__list">
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">키워드와 상세키워드 모두 포함(AND)</label>
+                          <input type="text" id="keword" placeholder="키워드와 상세키워드 모두 포함(AND)" class="text-form__input">
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">키워드 혹은 상세키워드에 속함(OR)</label>
+                          <input type="text" id="keword" placeholder="키워드 혹은 상세키워드에 속함(OR)" class="text-form__input">
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">제외하는 단어(NOT)</label>
+                          <input type="text" id="keword" placeholder="제외하는 단어(NOT)" class="text-form__input">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    기간
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--period">
+                  <div class="select-layer__body">
+
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            전체
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            1주일
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            3개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            6개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1년
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datepicker-group">
+                      <button type="button" class="group-list__link">
+                        기간별
+                      </button>
+                      <div class="datepicker-form">
+                        <input id="dt1" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt1" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                      <div class="datepicker-form">
+                        <input id="dt2" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt2" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+            <span class="search-area__guidance-text">
+              <em class="text-necessary">*</em>
+              필수항목
+            </span>
+          </div>
+          <div class="result-area">
+            <strong class="result-area__text">
+              <em class="text-emphasis color--emphasis">'검색어'</em>에 대한
+              <em class="text-emphasis">1,265,082건</em>
+              의 검색 결과를 찾았습니다.
+            </strong>
+            <ul class="sub-tab-list">
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  전체
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  뉴스기사
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  뉴스댓글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  카페 게시글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item">
+                <button type="button" class="sub-tab-list__button">
+                  카페댓글
+                </button>
+              </li>
+              <!-- 선택 되었을 경우, sub-tab-list__item--selected 클래스 추가-->
+              <li class="sub-tab-list__item sub-tab-list__item--selected">
+                <button type="button" class="sub-tab-list__button">
+                  블로그
+                </button>
+              </li>
+            </ul>
+            <div class="result-area__article-content">
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-refresh"></span>
+                  새로고침
+                </button>
+                <!-- button--secondary 에서 button--ghost으로 변경 2020-12-09 -->
+                <button type="button" class="button button--ghost">
+                  <span class="icon-common icon-chart"></span>
+                  평판분석
+                </button>
+                <div class="select-form">
+                  <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                  <button type="button" class="select-form__toggle-button">
+                    <span class="select-form__text">
+                      10개씩 보기
+                    </span>
+                    <span class="select-form__icon"></span>
+                  </button>
+                  <div class="select-layer select-layer--radio-form">
+                    <div class="select-layer__body">
+                      <ul class="select-layer__list">
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd1" class="radio-form__input" name="inp1">
+                            <label for="rd1" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">10개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd2" class="radio-form__input" name="inp1">
+                            <label for="rd2" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">20개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="select-layer__item">
+                          <div class="radio-form">
+                            <input type="radio" id="rd3" class="radio-form__input" name="inp1">
+                            <label for="rd3" class="radio-form__label">
+                              <span class="radio-form__radio-icon icon-radio"></span>
+                              <span class="radio-form__text">30개씩 보기</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="select-layer__footer">
+                      <button class="button button--primary">
+                        적용
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="filter-list">
+                  <li class="filter-list__item filter-list__item--select">
+                    <!-- filter-list__toggle-button--selected 클래스 토글 -->
+                    <button class="filter-list__button filter-list__toggle-button" type="button">
+                      정확도순
+                      <span class="filter-list__icon"></span>
+                    </button>
+                    <ul class="radio-list">
+                      <li class="radio-list__item">
+                        <div class="radio-form radio-form--text">
+                          <input type="radio" id="filter-radio01" class="radio-form__input" name="ip1">
+                          <label for="filter-radio01" class="radio-form__label">
+                            <span class="radio-form__text">올림차순</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="radio-list__item">
+                        <div class="radio-form radio-form--text">
+                          <input type="radio" id="filter-radio02" class="radio-form__input" name="ip1">
+                          <label for="filter-radio02" class="radio-form__label">
+                            <span class="radio-form__text">내림차순</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="filter-list__item">
+                    <button class="filter-list__button" type="button">
+                      정확도순
+                    </button>
+                  </li>
+                  <li class="filter-list__item">
+                    <button class="filter-list__button" type="button">
+                      최신순
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스 기사</strong>
+                  <span class="article-content__text">(587,463)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시 </em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를
+                      경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시 </em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      [이슈& 직설] 홍남기도 묘안 없는 '전세 대란'…1800:1까지 치솟은 청약 경쟁률, <em class="text-emphasis color--emphasis">3기
+                        신도시</em>가 대안 될까
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">뉴스댓글</strong>
+                  <span class="article-content__text">(365,871)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시</em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시</em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">카페 게시글</strong>
+                  <span class="article-content__text">(87,463)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시 </em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를
+                      경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시 </em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      [이슈& 직설] 홍남기도 묘안 없는 '전세 대란'…1800:1까지 치솟은 청약 경쟁률, <em class="text-emphasis color--emphasis">3기
+                        신도시</em>가 대안 될까
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">카페댓글</strong>
+                  <span class="article-content__text">(1,236,871)</span>
+                </div>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">신도시</em>사전청약에도 영끌나선 2030…서울 아파트 매수 역대최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">약 일정을 발표했지만 </em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대
+                      최고치를
+                      경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        연합뉴스연합뉴스연합뉴스
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---portal">
+                        네이버네이버네이버
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---user-id">
+                        hellohellohellohellohello
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---emotion">
+                        좋아요:3&nbsp;&nbsp;&nbsp;훈훈해요:1&nbsp;&nbsp;&nbsp;슬퍼요:4&nbsp;&nbsp;&nbsp;화나요:14&nbsp;&nbsp;&nbsp;후속기사원해요:2
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---region">
+                        서울서울서울서울
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                  <li class="article-list__item">
+                    <a href="#" target="_blank" class="article-list__link">
+                      <!-- em에 text-emphasis 클래스 추가 2020-12-09 -->
+                      <em class="text-emphasis color--emphasis">3기 신도시</em>사전청약 발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030
+                      서울아파트 매수세 최고사전청약
+                      발표에도 2030 서울아파트 매수세 최고사전청약 발표에도 2030 서울아파트 매수세 최고
+                    </a>
+                    <span class="article-list__text">
+                      정부가 지난달 <em class="color--emphasis">3기 신도시</em> 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한
+                      것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별 현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                      정부가 지난달 3기 신도시 사전청약 일정을 발표했지만 20대 이하와 30대의 서울아파트 매수세가 역대 최고치를 경신한 것으로 나타났다. 21일 한국감정원 아파트 매입자 연령대별
+                      현황에
+                      따르면 지난달 서울 아파트의 30대 거래량은 1천790건으로, 전체 거래량(4천795건)의 37.3%에 달했다. 이는 작년 1월 연령대별 통계 조사가 시작된 이래 역대 최고
+                      수치다.
+                    </span>
+                    <div class="article-list__information">
+                      <span class="article-list__information-text">
+                        연합뉴스
+                      </span>
+                      <span class="article-list__information-text">
+                        네이버
+                      </span>
+                      <span class="article-list__information-text">
+                        honeg20202020
+                      </span>
+                      <span class="article-list__information-text">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="article-content__bottom-group">
+                  <a href="#" class="article-content__link">
+                    <span class="article-content__link-text">더보기</span>
+                    <span class="icon-common icon-more"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="pagination">
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow-more">
+                    <span class="text-image-replacement">10개 이전으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-before-arrow">
+                    <span class="text-image-replacement">바로 이전으로</span>
+                  </span>
+                </button>
+                <ol class="pagination-list">
+                  <li class="pagination-list__item">
+                    <!-- 2020-12-21 pagination-list__link--active class 추가 시 활성화 -->
+                    <a class="pagination-list__link pagination-list__link--active" href="#">
+                      1
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      4
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      5
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      6
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      7
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      8
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      9
+                    </a>
+                  </li>
+                  <li class="pagination-list__item">
+                    <a class="pagination-list__link" href="#">
+                      10
+                    </a>
+                  </li>
+                </ol>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow">
+                    <span class="text-image-replacement">바로 다음으로</span>
+                  </span>
+                </button>
+                <button class="button button--icon pagination__button" type="button">
+                  <span class="icon-common icon-next-arrow-more">
+                    <span class="text-image-replacement">10개 다음으로</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="go-top-button" type="button">
+          <span class="icon-common icon-go-top">
+            <span class="text-image-replacement">가장 위로이동</span>
+          </span>
+        </button>
+        <!-- 로딩바 2020-12-29 -->
+        <div class="loader-wrap" style="display: none">
+          <div class="loader">Loading 중</div>
+        </div>
+        <!-- // 로딩바 2020-12-29 -->
+      </div>
+
+    </main>
+    <!-- dialog 2020-12-29 -->
+    <!-- 레이어 열기 / 닫기 dialog-wrap--open 클래스로 제어 -->
+    <div class="dialog-wrap">
+      <div class="dimmed-area"></div>
+      <div class="dialog">
+        <div class="dialog__header">
+          <strong class="dialog__header-title">
+            뉴스기사
+          </strong>
+          <button class="button button--icon dialog__close-button" type="button">
+            <span class="icon-common icon-close">
+              <span class="text-image-replacement">닫기</span>
+            </span>
+          </button>
+        </div>
+        <div class="dialog__body">
+          <div class="article">
+            <div class="article__header">
+              <strong class="article__header-title">3기 신도시 사전청약 발표에도 2030 서울아파트 매수세 최고</strong>
+              <div class="article-list__information">
+                <span class="article-list__information-text article-list__information-text---newspaper">
+                  연합뉴스
+                </span>
+                <span class="article-list__information-text article-list__information-text---portal">
+                  네이버
+                </span>
+                <span class="article-list__information-text article-list__information-text---portal">
+                  카페명
+                </span>
+                <span class="article-list__information-text article-list__information-text---date">
+                  2020-10-04 15:44
+                </span>
+                <span class="article-list__information-text article-list__information-text---user-id">
+                  홍길동 기자
+                </span>
+              </div>
+              <ul class="reaction-list">
+                <li class="reaction-list__item reaction-list__item--like">
+                  <span class="icon-common img-like"></span>
+                  <span class="reaction-list__text">좋아요</span>
+                  <span class="reaction-list__count">19</span>
+                </li>
+                <li class="reaction-list__item reaction-list__item--warm">
+                  <span class="icon-common img-warm"></span>
+                  <span class="reaction-list__text">훈훈해요</span>
+                  <span class="reaction-list__count">4</span>
+                </li>
+                <li class="reaction-list__item reaction-list__item--sad">
+                  <span class="icon-common img-sad"></span>
+                  <span class="reaction-list__text">슬퍼요</span>
+                  <span class="reaction-list__count">234</span>
+                </li>
+                <li class="reaction-list__item reaction-list__item--angry">
+                  <span class="icon-common img-angry"></span>
+                  <span class="reaction-list__text">화나요</span>
+                  <span class="reaction-list__count">623</span>
+                </li>
+                <li class="reaction-list__item reaction-list__item--wish">
+                  <span class="icon-common img-wish"></span>
+                  <span class="reaction-list__text">후속기사 원해요</span>
+                  <span class="reaction-list__count">31</span>
+                </li>
+              </ul>
+            </div>
+            <div class="article__body">
+              <p class="article__body-text">
+                [아시아경제 김유리 기자] 한국부동산개발협회는 18일 한국부동산금융투자포럼과 서울 강남구 논현동 한국토지주택공사(LH) 서울지역 본부에서 상호협력에 관한 양해각서를 체결했다고 밝혔
+                다. 이번 양해각서에는 부동산개발 및 부동산간접투자 시장의 활성화를 위한 공동조사와 교류협력, 정책제안, 세미나 공동개최 및 홍보 등 양 기관의 협력과 발전을 위한 포괄적 상호협력 체계를
+                구축하는 내용을 담고 있다.
+                <br />
+                김승배 한국부동산개발협회 회장은 "부동산개발 시장과 부동산간접투자 시장은 매년 지속적으로 성장하고 있는 부동산산업을 대표하는 분야"라며 네트워크 및 전문성을 갖춘 양 기관의 협력을
+                바탕으로 부동산산업의 건전한 발전과 육성을 꾀할 것"이라고 말했다. 한국부동산개발협회는 '부동산개발업의 관리 및 육성에 관한 법률' 제29조에 근거해 설립된 법정단체다.
+                <br /><br />
+                법정(위탁)업무, 부동산개발 전문인력 양성 및 통합관리사업, 정책건의, 최고위과정 개설·운영, 인큐베이팅센터·민간공공개발협력센터 설립·운영, 각종 학술 세미나등 다양한 사업을 진행하고
+                있다.
+              </p>
+              <div class="comment">
+                <strong class="comment__title">
+                  댓글
+                </strong>
+                <ul class="comment-list">
+                  <li class="comment-list__item">
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        inco***
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                    <p class="comment-list__text">
+                      지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다.
+                    </p>
+                  </li>
+                  <li class="comment-list__item">
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        inco***
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                    <p class="comment-list__text">
+                      지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳
+                      있습니
+                      다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳
+                      있
+                      습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고
+                      있는곳
+                      있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고
+                      있는
+                      곳 있습니다.
+                    </p>
+                  </li>
+                  <li class="comment-list__item">
+                    <div class="article-list__information">
+                      <span class="article-list__information-text article-list__information-text---newspaper">
+                        inco***
+                      </span>
+                      <span class="article-list__information-text article-list__information-text---date">
+                        2020-10-04 15:44
+                      </span>
+                    </div>
+                    <p class="comment-list__text">
+                      지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳
+                      있습니
+                      다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳
+                      있
+                      습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고
+                      있는곳
+                      있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고 있는곳 있습니다. 지역주택조합도 완화해주세요 거의다 철거해놓고. 알박기때문에 아파트 못짓고
+                      있는
+                      곳 있습니다.
+                    </p>
+                  </li>
+                </ul>
+                <div class="pagination">
+                  <button class="button button--icon pagination__button" type="button">
+                    <span class="icon-common icon-before-arrow-more">
+                      <span class="text-image-replacement">10개 이전으로</span>
+                    </span>
+                  </button>
+                  <button class="button button--icon pagination__button" type="button">
+                    <span class="icon-common icon-before-arrow">
+                      <span class="text-image-replacement">바로 이전으로</span>
+                    </span>
+                  </button>
+                  <ol class="pagination-list">
+                    <li class="pagination-list__item">
+                      <!-- 2020-12-21 pagination-list__link--active class 추가 시 활성화 -->
+                      <a class="pagination-list__link pagination-list__link--active" href="#">
+                        1
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        2
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        3
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        4
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        5
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        6
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        7
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        8
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        9
+                      </a>
+                    </li>
+                    <li class="pagination-list__item">
+                      <a class="pagination-list__link" href="#">
+                        10
+                      </a>
+                    </li>
+                  </ol>
+                  <button class="button button--icon pagination__button" type="button">
+                    <span class="icon-common icon-next-arrow">
+                      <span class="text-image-replacement">바로 다음으로</span>
+                    </span>
+                  </button>
+                  <button class="button button--icon pagination__button" type="button">
+                    <span class="icon-common icon-next-arrow-more">
+                      <span class="text-image-replacement">10개 다음으로</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dialog__foot"></div>
+      </div>
+    </div>
+    <!-- // dialog 2020-12-29 -->
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/prefixfree.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script>
+    // 임시 스크립트 추가
+    const filterListButton = document.querySelectorAll(".filter-list__toggle-button");
+    const filterListButtonSelected = "filter-list__toggle-button--selected";
+    const selectFormToggleButton = document.querySelectorAll(".select-form__toggle-button");
+    const selectFormToggleButtonSelected = "select-form__toggle-button--selected";
+    const buttonGoTop = document.querySelector(".go-top-button");
+    const articleListLik = document.querySelector(".article-list__link");
+    const dialogWrap = document.querySelector(".dialog-wrap");
+    const dialogHeaderClosebutton = document.querySelector(".dialog__close-button");
+    const dimmedLayer = document.querySelector(".dimmed-area");
+
+    function articleDialogToggle() {
+      articleListLik.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        dialogWrap.classList.add("dialog-wrap--open");
+      })
+
+      dialogHeaderClosebutton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        dialogWrap.classList.remove("dialog-wrap--open");
+      })
+
+      dimmedLayer.addEventListener('click', function () {
+        dialogWrap.classList.remove("dialog-wrap--open");
+      })
+    }
+
+    function goTopButtonActive() {
+      buttonGoTop.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      })
+    }
+
+    function toggleButtonActive() {
+      console.log(selectFormToggleButton);
+      console.log(typeof (selectFormToggleButton));
+
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+
+      selectFormToggleButton.forEach(function (i) {
+        i.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          console.log("select form toggle button clicked");
+          i.classList.toggle(selectFormToggleButtonSelected)
+        })
+      })
+
+      filterListButton.forEach(function (i) {
+        i.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          console.log("filter list button clicked");
+          i.classList.toggle(filterListButtonSelected)
+        })
+      })
+    }
+
+    function init() {
+      toggleButtonActive();
+      goTopButtonActive();
+      articleDialogToggle();
+    }
+
+    init()
+  </script>
+</body>
+
+</html>

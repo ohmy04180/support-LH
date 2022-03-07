@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/right_arrow copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="7.08578644 4.5 8.5 3.08578644 18.4142136 13 8.5 22.9142136 7.08578644 21.5 15.585 13"></polygon>
+    </defs>
+    <g id="icon/right_arrow-copy-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Path-15" fill="#5c9c00" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

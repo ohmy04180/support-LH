@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="250" viewBox="0 0 340 250">
+    <defs>
+        <rect id="6dapd0zexa" width="340" height="250" x="0" y="0" rx="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="qavuzutyjb" fill="#fff">
+            <use xlink:href="#6dapd0zexa"/>
+        </mask>
+        <use fill="#FFF" xlink:href="#6dapd0zexa"/>
+        <path fill="#A0B2D1" d="M0 -1H340V34H0z" mask="url(#qavuzutyjb)"/>
+        <circle cx="16" cy="17" r="6" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <rect width="291" height="92" x="25" y="51" fill="#A0B2D1" mask="url(#qavuzutyjb)" opacity=".3" rx="1"/>
+        <circle cx="78" cy="93" r="10" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="124" cy="93" r="10" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="170" cy="93" r="10" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="216" cy="93" r="10" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="262" cy="93" r="14" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="262" cy="93" r="10" fill="#7FD700" mask="url(#qavuzutyjb)"/>
+        <path fill="#7FD700" stroke="#FFF" stroke-width="4" d="M262 107c3.171 0 5.85 2.108 6.71 5H283c3.866 0 7 3.134 7 7v11c0 3.866-3.134 7-7 7h-42c-3.866 0-7-3.134-7-7v-11c0-3.866 3.134-7 7-7h14.29c.86-2.892 3.539-5 6.71-5z" mask="url(#qavuzutyjb)"/>
+        <rect width="36" height="6" x="244" y="122" fill="#FFF" mask="url(#qavuzutyjb)" rx="3"/>
+        <rect width="291" height="7" x="25" y="193" fill="#A0B2D1" mask="url(#qavuzutyjb)" opacity=".3" rx="1"/>
+        <rect width="191" height="13" x="25" y="155" fill="#A0B2D1" mask="url(#qavuzutyjb)" rx="1"/>
+        <rect width="128" height="13" x="25" y="174" fill="#F47D72" mask="url(#qavuzutyjb)" rx="1"/>
+        <rect width="255" height="7" x="25" y="207" fill="#A0B2D1" mask="url(#qavuzutyjb)" opacity=".3" rx="1"/>
+        <rect width="214" height="7" x="25" y="221" fill="#A0B2D1" mask="url(#qavuzutyjb)" opacity=".3" rx="1"/>
+        <circle cx="38" cy="17" r="6" fill="#FFF" mask="url(#qavuzutyjb)"/>
+        <circle cx="60" cy="17" r="6" fill="#FFF" mask="url(#qavuzutyjb)"/>
+    </g>
+</svg>

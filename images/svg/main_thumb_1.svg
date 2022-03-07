@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="250" viewBox="0 0 340 250">
+    <defs>
+        <rect id="86njuvbpca" width="340" height="250" x="0" y="0" rx="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b39jmnub6b" fill="#fff">
+            <use xlink:href="#86njuvbpca"/>
+        </mask>
+        <use fill="#FFF" xlink:href="#86njuvbpca"/>
+        <path fill="#A0B2D1" d="M0 -1H340V34H0z" mask="url(#b39jmnub6b)"/>
+        <circle cx="16" cy="17" r="6" fill="#FFF" mask="url(#b39jmnub6b)"/>
+        <rect width="291" height="12" x="25" y="51" fill="#A0B2D1" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="76" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="76" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="76" fill="#F47D72" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="104" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="104" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="104" fill="#7FD700" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="132" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="132" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="132" fill="#7FD700" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="160" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="160" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="160" fill="#7FD700" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="188" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="188" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="188" fill="#7FD700" mask="url(#b39jmnub6b)" rx="1"/>
+        <rect width="169" height="12" x="25" y="216" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="263" y="216" fill="#A0B2D1" mask="url(#b39jmnub6b)" opacity=".3" rx="1"/>
+        <rect width="53" height="12" x="202" y="216" fill="#7FD700" mask="url(#b39jmnub6b)" rx="1"/>
+        <circle cx="38" cy="17" r="6" fill="#FFF" mask="url(#b39jmnub6b)"/>
+        <circle cx="60" cy="17" r="6" fill="#FFF" mask="url(#b39jmnub6b)"/>
+    </g>
+</svg>

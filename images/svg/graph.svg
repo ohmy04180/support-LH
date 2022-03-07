@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/graph copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,4 L4,20 L12,20 L12,6 L16,6 L16,20 L24,20 L24,22 L2,22 L2,4 L4,4 Z M22,11 L22,21 L18,21 L18,11 L22,11 Z M10,15 L10,21 L6,21 L6,15 L10,15 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/graph-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Path-5" fill="#5c9c00" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

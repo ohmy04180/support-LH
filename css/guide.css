@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* web font */
+@font-face {
+	font-family: "NanumBarunGothic";
+    src: url(../font/NanumBarunGothic.woff) format("woff"),
+         url(../font/NanumBarunGothic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: "NanumBarunGothic";
+    src: url(../font/NanumBarunGothic.woff) format("woff"),
+         url(../font/NanumBarunGothic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* reset */
+body{margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
+main {display: block;}
+a{color: inherit; text-decoration: inherit;}
+a img{border: none;}
+img {max-width: 100%;}
+li{list-style: none;}
+address, em, i{font-style: normal;}
+table {border-collapse: collapse;}
+i.fa {display: inline-block; overflow: hidden; position: relative; vertical-align: middle;}
+i.fa span {position: absolute; left: -999px;}
+
+/* common  */
+body{font-family: '나눔바른고딕', NanumBarunGothic, '맑은 고딕', 'Malgun Gothic', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif; font-size: 13px; color: #333333; background: #ffffff;}
+#wrapper{min-width: 320px;}
+#wrapper > h1 {margin: 10px; border: 2px solid #e0e0e0; padding: 15px 0; text-align: center; font-size: 28px; position: relative;}
+#wrapper > h1.fixed {position: fixed; left: 0; top: 0; width: 100%; margin: 0; box-sizing: border-box; background: rgba(255, 255, 255, 0.5);}
+#wrapper > h1 a.home {position: absolute; left: 30px; top: 8px; font-size: 40px; color: #aaaaaa;}
+
+/* main */
+ul.ui-list {margin: 30px; font-size: 20px; text-align: center;}
+ul.ui-list li {margin: 5px; position: relative; border: 2px solid #e0e0e0; display: inline-block;}
+ul.ui-list li a {display: block; width: 300px; text-align: center; padding: 15px 20px; box-sizing: border-box;}
+ul.ui-list li a:hover {color: #4bc1d2; background: #f9f9f9;}
+
+
+
+
+/* module(UI) */
+
+/* image-slide */
+div.image-slide {width: 940px; height: 600px; border: 2px solid #e0e0e0; position: relative; left: 100px; top: 50px;}
+div.image-slide ul.slide {width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden;}
+div.image-slide ul.slide li {width: 100%; height: 100%; position: absolute; left: 0; top: 0; display: none;}
+div.image-slide ul.slide li:first-child {display: block;}
+div.image-slide ul.slide li a {display: block;}
+div.image-slide ul.indicator {position: absolute; left: 0; bottom: 15px; width: 100%; text-align: center;}
+div.image-slide ul.indicator li {display: inline-block; margin: 0 2px;}
+div.image-slide ul.indicator li a {display: block; width: 10px; height: 10px; border: 3px solid #ffffff; border-radius: 50%; overflow: hidden; text-indent: -999px; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);}
+div.image-slide ul.indicator li.on a {border-color: #4bc1d2; background: #4bc1d2;}
+div.image-slide p.control a.prev {position: absolute; top: 50%; margin-top: -40px; left: -60px;}
+div.image-slide p.control a.next {position: absolute; top: 50%; margin-top: -40px; right: -60px;}
+div.image-slide p.control a.play {position: absolute; right: 20px; bottom: 15px; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-size: 18px;}
+
+/* image-slide-banner */
+div.image-slide-banner {width: 940px; height: 600px; border: 2px solid #e0e0e0; position: relative; left: 100px; top: 50px;}
+div.image-slide-banner > div.box {width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden;}
+div.image-slide-banner ul.slide {width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: left 0.5s;}
+div.image-slide-banner ul.slide li {width: 100%; height: 100%; position: absolute; left: 0; top: 0; display: none;}
+div.image-slide-banner ul.slide li:first-child {display: block;}
+div.image-slide-banner ul.slide li a {display: block;}
+div.image-slide-banner ul.indicator {position: absolute; left: 0; bottom: 15px; width: 100%; text-align: center;}
+div.image-slide-banner ul.indicator li {display: inline-block; margin: 0 2px;}
+div.image-slide-banner ul.indicator li a {display: block; width: 10px; height: 10px; border: 3px solid #ffffff; border-radius: 50%; overflow: hidden; text-indent: -999px; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);}
+div.image-slide-banner ul.indicator li.on a {border-color: #4bc1d2; background: #4bc1d2;}
+div.image-slide-banner p.control a.prev {position: absolute; top: 50%; margin-top: -40px; left: -60px;}
+div.image-slide-banner p.control a.next {position: absolute; top: 50%; margin-top: -40px; right: -60px;}
+div.image-slide-banner p.control a.play {position: absolute; right: 20px; bottom: 15px; color: #ffffff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-size: 18px;}
+
+/* slide-banner */
+div.slide-banner {border: 1px solid #e0e0e0; margin: 20px; width: 800px; position: relative; box-sizing: border-box; padding: 0 30px;}
+div.slide-banner > div.box {position: relative; height: 69px; overflow: hidden;}
+div.slide-banner ul.banner {position: absolute; left: 0; top: 0; width: 2000px;}
+div.slide-banner ul.banner li {float: left; padding: 5px 0; margin: 0 10px;}
+div.slide-banner ul.banner li a {display: block; width: 170px; height: 57px; border: 1px solid #f5f5f5;}
+div.slide-banner p.control a.prev {position: absolute; left: 0; top: 0; border-right: 1px solid #e0e0e0; width: 30px; height: 100%; box-sizing: border-box; color: #bbbbbb; font-size: 20px; text-align: center; line-height: 70px;}
+div.slide-banner p.control a.next {position: absolute; right: 0; top: 0; border-left: 1px solid #e0e0e0; width: 30px; height: 100%; box-sizing: border-box; color: #bbbbbb; font-size: 20px; text-align: center; line-height: 70px;}
+div.slide-banner p.control a.prev i,
+div.slide-banner p.control a.next i {position: relative;}
+div.slide-banner p.control a.play {position: absolute; right: 35px; bottom: 5px; width: 20px; height: 20px; text-align: center; line-height: 20px; border: 1px solid #e0e0e0; background: #ffffff; box-sizing: border-box; font-size: 12px; color: #bbbbbb;}
+div.slide-banner p.control a:hover {color: #999999;}
+
+
+/* GNB */
+#header {position: fixed; left: 0; top: 200px; height: 60px; width: 100%; min-width: 1400px; box-sizing: border-box; background: #ffffff; border-top: 1px solid #093968; border-bottom: 2px solid #093968; z-index: 500;}
+#header h1 {position: absolute; left: 25px; top: 20px;}
+#gnb {position: absolute; left: 210px; top: 0;}
+#gnb > ul > li {float: left;}
+#gnb > ul > li + li {margin-left: 70px;}
+#gnb > ul > li > a {display: block; line-height: 60px; font-size: 16px; font-weight: 700;}
+#gnb > ul > li > a:hover,
+#gnb > ul > li > a:focus {color: #223c7a;}
+#gnb > ul > li.on > a {color: #223c7a;}
+#gnb ul ul {position: absolute; top: 59px; font-size: 14px; background: #ffffff; padding: 20px; border: 1px solid #093968; overflow: hidden; transform-origin: 50% 0%; transform: scale(1, 0); transition: transform 0.3s;}
+#gnb > ul > li.open > ul {transform: scale(1, 1);}
+#gnb ul ul li + li {margin-top: 12px;}
+#gnb ul ul li a {display: block;}
+#gnb ul ul li.on a,
+#gnb ul ul li a:hover{color: #e4007f;}
+#gnb > ul > li.sub1 > ul {left: -70px;}
+#gnb > ul > li.sub2 > ul {left: 75px;}
+#gnb > ul > li.sub3 > ul {left: 255px;}
+#gnb > ul > li.sub4 > ul {left: 395px;}
+#gnb > ul > li.sub5 > ul {left: 555px;}
+#gnb > ul > li.sub6 > ul {right: -20px;}
+#gnb > span.bar {position: absolute; left: 0; bottom: 0; height: 4px; width: 100px; background: #223c7a; display: none;}
+#top-nav {position: absolute; right: 25px; top: 20px; font-size: 14px;}
+#top-nav li {float: left;}
+#top-nav li:first-child span.name {margin-right: 10px;}
+#top-nav li + li {margin-left: 10px;}
+#top-nav li a {display: inline-block; vertical-align: middle;}
+#top-nav li a i {font-size: 18px; color: #223c7a;}
+
+/* drag */
+#drag-box {position: relative; width: 800px; height: 600px; border: 2px solid #e0e0e0; margin: 20px;}
+#drag-box a {width: 100px; height: 100px; position: absolute;}
+#drag-box a.box1 {left: 0; top: 0; background: #ff0000;}
+#drag-box a.box2 {left: 350px; top: 230px; background: #1b8f89;}
+
+
+/* layer popup */
+a.open-popup {display: inline-block; width: 200px; line-height: 40px; font-size: 20px; text-align: center; border: 1px solid #e0e0e0; margin-left: 20px;}
+#layer-mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 10000; background: rgba(0, 0, 0, 0.3)}
+aside.layer-popup {position: fixed; left: 50%; top: 50%; width: 400px; height: 600px; background: #ffffff; z-index: 10000; margin: -300px 0 0 -200px; overflow: hidden; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); display: none;}
+aside.layer-popup div.header {line-height: 50px; background: #5991cc; color: #ffffff; padding-left: 20px;}
+aside.layer-popup div.header h3 {font-size: 20px; font-weight: normal;}
+aside.layer-popup div.header a.close {position: absolute; right: 20px; top: 0; font-size: 24px;}
+aside.layer-popup div.body {overflow: auto; padding: 20px 20px 50px 20px; height: calc(100% - 80px); box-sizing: border-box;}
+aside.layer-popup div.footer {position: absolute; left: 0; bottom: 0; width: 100%; height: 30px; background: #f9f9f9;}
+aside.layer-popup div.footer h3 {position: absolute; right: 20px; top: 8px; width: 80px;}
+aside.layer-popup ul li {line-height: 40px;}
+
+aside.layer-popup.sample2 {width: 800px; height: 400px; margin: -200px 0 0 -400px;}
+aside.layer-popup.sample3 {width: 600px; height: 600px; margin: -300px 0 0 -300px;}
+
+
+
+
+

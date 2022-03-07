@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>`
+		<![endif]-->
+  <!-- <link href="../css/reset.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/common.css" rel="stylesheet" /> -->
+  <!-- <link href="../css/style.css" rel="stylesheet" /> -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../css/_lh-bigdata.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrap">
+    <main>
+      <div class="main">
+        <div class="guidance-wrap">
+          <h2 class="guidance-wrap__title">
+            이슈기사
+          </h2>
+          <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link">depth1</a>
+              </li>
+              <li class="breadcrumb-list__item">
+                <a href="#" class="breadcrumb-list__link breadcrumb-list__link--active">depth1</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-wrap issue-article-wrap">
+          <div class="search-area">
+            <div class="search-area__item">
+              <strong class="search-area__title">키워드<em class="text-necessary">*</em></strong>
+              <div class="text-form">
+                <label for="keword" class="screen-out">키워드</label>
+                <input type="text" id="keword" placeholder="검색어를 입력하세요." class="text-form__input">
+              </div>
+            </div>
+            <div class="search-area__item">
+              <strong class="search-area__title">검색조건<em class="text-necessary">*</em></strong>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    키워드
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--text-form">
+                  <div class="select-layer__body">
+                    <ul class="select-layer__list">
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">키워드와 상세키워드 모두 포함(AND)</label>
+                          <input type="text" id="keword" placeholder="키워드와 상세키워드 모두 포함(AND)" class="text-form__input">
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">키워드 혹은 상세키워드에 속함(OR)</label>
+                          <input type="text" id="keword" placeholder="키워드 혹은 상세키워드에 속함(OR)" class="text-form__input">
+                        </div>
+                      </li>
+                      <li class="select-layer__item">
+                        <div class="text-form">
+                          <label for="keword" class="screen-out">제외하는 단어(NOT)</label>
+                          <input type="text" id="keword" placeholder="제외하는 단어(NOT)" class="text-form__input">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    언론사
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--group-list">
+                  <div class="select-layer__header">
+                    <strong class="select-layer__title">언론사</strong>
+                    <div class="checkbox-form">
+                      <input type="checkbox" id="search2" class="checkbox-form__input" name="all">
+                      <label for="search2" class="checkbox-form__label">
+                        <span class="checkbox-form__checkbox-icon icon-check"></span>
+                        <span class="checkbox-form__text">전체선택</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="select-layer__body">
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="seoul" class="checkbox-form__input">
+                        <label for="seoul" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">서울</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search4" class="checkbox-form__input">
+                        <label for="search4" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">경기</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-layer__body-top-group">
+                      <div class="checkbox-form">
+                        <input type="checkbox" id="search3" class="checkbox-form__input">
+                        <label for="search3" class="checkbox-form__label">
+                          <span class="checkbox-form__checkbox-icon icon-check"></span>
+                          <span class="checkbox-form__text">강원</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                          <a href="#" class="group-list__link">
+                            언론사명
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="select-form">
+                <!-- 선택 되었을 경우, select-form__toggle-button--selected 클래스 추가 -->
+                <button type="button" class="select-form__toggle-button">
+                  <span class="select-form__text">
+                    기간
+                  </span>
+                  <span class="select-form__icon"></span>
+                </button>
+                <div class="select-layer select-layer--period">
+                  <div class="select-layer__body">
+
+                    <div class="group-list">
+                      <div class="group-list__inner">
+                        <div class="group-list__item">
+                          <!-- 선택 되었을 경우, group-list__link--selected 클래스 추가 -->
+                          <a href="#" class="group-list__link">
+                            전체
+                          </a>
+                          <a href="#" class="group-list__link group-list__link--selected">
+                            1주일
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            3개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            6개월
+                          </a>
+                          <a href="#" class="group-list__link">
+                            1년
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="datepicker-group">
+                      <button type="button" class="group-list__link">
+                        기간별
+                      </button>
+                      <div class="datepicker-form">
+                        <input id="dt1" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt1" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                      <div class="datepicker-form">
+                        <input id="dt2" type="text" class="datepicker-form__input datepicker" readonly="readonly">
+                        <label for="dt2" class="datepicker-form__label">
+                          <span class="datepicker-form__icon icon-calender"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-layer__footer">
+                    <button class="button">
+                      초기화
+                    </button>
+                    <button class="button button--primary">
+                      적용
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="setting-group">
+                <button type="button" class="button">
+                  <span class="icon-common icon-reset"></span>
+                  초기화
+                </button>
+                <button type="button" class="button button--primary">
+                  <span class="icon-common icon-search"></span>
+                  검색
+                </button>
+              </div>
+            </div>
+            <span class="search-area__guidance-text">
+              <em class="text-necessary">*</em>
+              필수항목
+            </span>
+          </div>
+          <div class="result-area">
+            <strong class="result-area__text">
+              <em class="text-emphasis color--emphasis">'검색어'</em>에 대한
+              <em class="text-emphasis">1,265,082건</em>
+              의 검색 결과를 찾았습니다.
+            </strong>
+            <div class="result-area__article-content">
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">댓글 많은 기사 Top 10</strong>
+                  <span class="article-content__sub-text">
+                    기준일 : 2020-11-20 ~ 2020-11-26
+                  </span>
+                </div>
+                <!-- 임시 article-sample -->
+                <div class="article-sample"></div>
+              </div>
+              <div class="article-content">
+                <div class="article-content__top-group">
+                  <strong class="article-content__title">공감 많은 기사 Top 10</strong>
+                  <span class="article-content__sub-text">
+                    기준일 : 2020-11-20 ~ 2020-11-26
+                  </span>
+                </div>
+                <!-- 임시 article-sample -->
+                <div class="article-sample"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="go-top-button" type="button">
+          <span class="icon-common icon-go-top">
+            <span class="text-image-replacement">가장 위로이동</span>
+          </span>
+        </button>
+      </div>
+
+    </main>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/prefixfree.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script>
+    // 임시 스크립트 추가
+    const selectFormToggleButton = document.querySelectorAll(".select-form__toggle-button");
+    const selectFormToggleButtonSelected = "select-form__toggle-button--selected";
+    const buttonGoTop = document.querySelector(".go-top-button");
+
+    function goTopButtonActive() {
+      buttonGoTop.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      })
+    }
+
+    function toggleButtonActive() {
+      console.log(selectFormToggleButton);
+      console.log(typeof (selectFormToggleButton));
+
+      if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+      }
+
+      selectFormToggleButton.forEach(function (i) {
+        console.log(i);
+        i.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          console.log("clicked");
+          i.classList.toggle(selectFormToggleButtonSelected)
+        })
+      })
+    }
+
+    function init() {
+      toggleButtonActive();
+      goTopButtonActive();
+    }
+
+    init()
+  </script>
+</body>
+
+</html>

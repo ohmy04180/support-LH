@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- HTLM5shiv ie6~8 -->
+		<!--[if lt IE 9]> 
+			<script src="../js/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>
+		<![endif]-->
+		<!-- agGrid -->
+		<script src="../ag-grid/ag-grid-community.min.noStyle.js"></script>
+		<link rel="stylesheet" href="../ag-grid/ag-grid.css">
+		<link rel="stylesheet" href="../ag-grid/ag-theme-balham.css">
+		<!-- agGrid -->
+		<link href="../css/reset.css" rel="stylesheet" />
+		<link href="../css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+		h1{}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div class="header">
+					<h1 class="logo"><span>Mobigen</span></h1>
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#">데이터 검색</a>
+								<div class="nav-sub">
+									<h3>데이터 검색</h3>
+									<ul>
+										<li><a href="#">종합 검색</a></li>
+										<li><a href="#">테마 검색</a></li>
+										<li><a href="#">시각화 검색</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">데이터 서비스</a>
+								<div class="nav-sub">
+									<h3>데이터 서비스</h3>
+									<ul>
+										<li>
+											<a href="#">전체 보고서 / 서비스</a>
+										</li>
+										<li>
+											<a href="#">추천 보고서 / 서비스</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="active">
+								<a href="#">커뮤니케이션</a>
+								<div class="nav-sub">
+									<h3>커뮤니케이션</h3>
+									<ul>
+										<li><a href="#">전체 현황</a></li>
+										<li><a href="#">수집 / 제공 요청</a></li>
+										<li><a href="#">과제 / 분석 요청</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">이용안내</a>
+								<div class="nav-sub">
+									<h3>이용안내</h3>
+									<ul>
+										<li><a href="#">이용 가이드</a></li>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">자료실</a></li>
+										<li><a href="#">Q&A</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<!-- pc -->
+					<div class="private" tabindex="1">
+						<span class="user-name">홍길동 님</span>
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg plus"></i></button>
+					</div>
+					<!-- //pc -->
+					<!-- mobile -->
+					<div class="menu-btn">
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg menu"></i></button>
+					</div>
+					<!-- //mobile -->
+				</div>
+			</header>
+            <main>
+<section>
+
+<i class="mu-icon-zeplin"></i>
+<i class="mu-icon-illust"></i>
+<h1>input</h1>
+<h2>input - normal</h2>
+<input type="text" class="mu-input" value="normal">
+<h2>input - large</h2>
+<input type="text" class="mu-input mu-input-lg" value="normal">
+<h2>input - placeholder</h2>
+<input type="text" class="mu-input" placeholder="placeholder">
+<h2>input - disabled</h2>
+<input type="text" class="mu-input" value="disabled" disabled="disabled">
+<h2>input - readonly</h2>
+<input type="text" class="mu-input" value="readonly" readonly="readonly">
+<h2>input - large, w120</h2>
+<input type="text" class="mu-input mu-input-lg w120" value="normal">
+<h2>input - search, large, w300</h2>
+<div class="mu-input-icon w300">
+	<input type="text" class="mu-input mu-input-lg" placeholder="search...">
+	<i class="mu-icon-svg search"></i>
+</div>
+<hr>
+<h1>textarea</h1>
+<h2>textarea - normal</h2>
+<textarea class="mu-area"></textarea>
+<h2>textarea - disabled</h2>
+<textarea class="mu-area" disabled="disabled">disabled</textarea>
+<h2>textarea - readonly</h2>
+<textarea class="mu-area" readonly="readonly">readonly</textarea>
+<h2>textarea - resize</h2>
+<textarea class="mu-area mu-area-resize"></textarea>
+<hr>
+<h1>button</h1>
+<h2>button - normal</h2>
+<button type="button" class="mu-btn"><span>button</span></button>
+<h2>button - small</h2>
+<button type="button" class="mu-btn mu-btn-sm"><span>button</span></button>
+<h2>button - large</h2>
+<button type="button" class="mu-btn mu-btn-lg"><span>button</span></button>
+<h2>button - primary</h2>
+<button type="button" class="mu-btn mu-btn-primary"><span>button</span></button>
+<h2>button - icon + text</h2>
+<button type="button" class="mu-btn mu-btn-icon"><i class="mu-icon-svg pencil"></i><span>button</span></button>
+<h2>button - text + icon</h2>
+<button type="button" class="mu-btn mu-btn-icon"><span>button</span><i class="mu-icon-svg pencil"></i></button>
+<h2>button - icon only</h2>
+<button type="button" class="mu-btn mu-btn-icon-only"><i class="mu-icon-svg pencil"></i></button>
+<h2>button - small - icon only</h2>
+<button type="button" class="mu-btn mu-btn-sm mu-btn-icon-only"><i class="mu-icon-svg pencil"></i></button>
+<h2>button - bg-non</h2>
+<button type="button" class="mu-btn mu-btn-bg-non"><span>button</span></button>
+<h2>button - bg-non - icon + text</h2>
+<button type="button" class="mu-btn mu-btn-icon mu-btn-bg-non"><i class="mu-icon-svg pencil"></i><span>button</span></button>
+<h2>button - bg-non - icon only</h2>
+<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg pencil"></i></button>
+<h2>button - disabled</h2>
+<button type="button" class="mu-btn" disabled="disabled"><span>button</span></button>
+<h2>button - bg-non - disabled</h2>
+<button type="button" class="mu-btn mu-btn-bg-non" disabled="disabled"><span>button</span></button>
+<h2>button - icon + text</h2>
+<button type="button" class="mu-btn mu-btn-icon"><i class="mu-icon-svg pencil"></i><span>button</span></button>
+<hr>
+<h1>checkbox</h1>
+<h2>checkbox - ckeckbox + text</h2>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb1_1" checked="checked">
+	<label for="ckb1_1">check1</label>
+</div>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb1_2">
+	<label for="ckb1_2">check2</label>
+</div>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb1_3">
+	<label for="ckb1_3">check3</label>
+</div>
+<h2>checkbox - text + ckeckbox</h2>
+<div class="mu-checkbox mu-checkbox-rear">
+	<input type="checkbox" id="ckb2_1" checked="checked">
+	<label for="ckb2_1">check1</label>
+</div>
+<div class="mu-checkbox mu-checkbox-rear">
+	<input type="checkbox" id="ckb2_2">
+	<label for="ckb2_2">check2</label>
+</div>
+<div class="mu-checkbox mu-checkbox-rear">
+	<input type="checkbox" id="ckb2_3">
+	<label for="ckb2_3">check3</label>
+</div>
+<h2>checkbox - disabled</h2>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb3_1" checked="checked" disabled="disabled">
+	<label for="ckb3_1">check1</label>
+</div>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb3_2" disabled="disabled">
+	<label for="ckb3_2">check2</label>
+</div>
+<h2>checkbox - text none</h2>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb4_1" checked="checked">
+	<label for="ckb4_1"></label>
+</div>
+<div class="mu-checkbox">
+	<input type="checkbox" id="ckb4_2">
+	<label for="ckb4_2"></label>
+</div>
+<hr>
+<h1>radio</h1>
+<h2>radio - radio + text</h2>
+<div class="mu-radio">
+	<input type="radio" id="r1_1" name="radio1" checked="checked">
+	<label for="r1_1">radio1</label>
+</div>
+<div class="mu-radio">
+	<input type="radio" id="r1_2" name="radio1">
+	<label for="r1_2">radio2</label>
+</div>
+<div class="mu-radio">
+	<input type="radio" id="r1_3" name="radio1">
+	<label for="r1_3">radio3</label>
+</div>
+<h2>radio - text + radio</h2>
+<div class="mu-radio mu-radio-rear">
+	<input type="radio" id="r2_1" name="radio2" checked="checked">
+	<label for="r2_1">radio1</label>
+</div>
+<div class="mu-radio mu-radio-rear">
+	<input type="radio" id="r2_2" name="radio2">
+	<label for="r2_2">radio2</label>
+</div>
+<div class="mu-radio mu-radio-rear">
+	<input type="radio" id="r2_3" name="radio2">
+	<label for="r2_3">radio3</label>
+</div>
+<h2>radio - disabled</h2>
+<div class="mu-radio">
+	<input type="radio" id="r3_1" name="radio3" checked="checked" disabled="disabled">
+	<label for="r3_1">radio1</label>
+</div>
+<div class="mu-radio">
+	<input type="radio" id="r3_2" name="radio3" disabled="disabled">
+	<label for="r3_2">radio2</label>
+</div>
+<h2>radio - text none</h2>
+<div class="mu-radio">
+	<input type="radio" id="r4_1" name="radio4" checked="checked">
+	<label for="r4_1"></label>
+</div>
+<div class="mu-radio">
+	<input type="radio" id="r4_2" name="radio4">
+	<label for="r4_2"></label>
+</div>
+<hr>
+<h1>selectbox - JS</h1>
+<h2>selectbox - normal</h2>
+<div class="mu-selectbox">
+	<button class="mu-value"><span>list default</span></button>
+	<ul class="mu-list">
+		<li value="1">list option1</li>
+		<li value="2">list option2</li>
+		<li value="3">list option3</li>
+		<li value="4" class="disabled">list option4</li>
+		<li value="5">list option5</li>
+	</ul>
+</div>
+<h2>selectbox - large</h2>
+<div class="mu-selectbox mu-selectbox-lg">
+	<button class="mu-value"><span>list default</span></button>
+	<ul class="mu-list">
+		<li value="1">list option1</li>
+		<li value="2">list option2</li>
+		<li value="3">list option3</li>
+		<li value="4" class="disabled">list option4</li>
+		<li value="5">list option5</li>
+	</ul>
+</div>
+<h2>selectbox - disabled</h2>
+<div class="mu-selectbox disabled">
+	<button class="mu-value"><span>list default</span></button>
+	<ul class="mu-list">
+		<li value="1">list option1</li>
+		<li value="2">list option2</li>
+		<li value="3">list option3</li>
+		<li value="4">list option4</li>
+		<li value="5">list option5</li>
+	</ul>
+</div>
+<h2>selectbox - on</h2>
+<div class="mu-selectbox on">
+	<button class="mu-value"><span>list default</span></button>
+	<ul class="mu-list">
+		<li value="1">list option1</li>
+		<li value="2" class="active">list option2</li>
+		<li value="3">list option3</li>
+		<li value="4" class="disabled">list option4</li>
+		<li value="5">list option5</li>
+	</ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>selectbox - large, w120</h2>
+<div class="mu-selectbox mu-selectbox-lg w120">
+	<button class="mu-value"><span>list default</span></button>
+	<ul class="mu-list">
+		<li value="1">list option1</li>
+		<li value="2">list option2</li>
+		<li value="3">list option3</li>
+		<li value="4" class="disabled">list option4</li>
+		<li value="5">list option5</li>
+	</ul>
+</div>
+<hr>
+<h1>datepicker - jquery UI</h1>
+<h2>datepicker</h2>
+<div class="mu-datepicker mu-input-icon">
+	<input type="text" class="mu-input datepicker" readonly="readonly">
+	<i class="mu-icon-svg calendar"></i>
+</div>
+<h2>datepicker</h2>
+<div class="mu-datepicker">
+	<input type="text" class="mu-input datepicker" readonly="readonly">
+</div>
+<hr>
+<h2>tab - normal</h2>
+<ul id="mu-tab" class="mu-tab">
+	<li class="active"><a href="">tab1</a></li>
+	<li><a href="">tab2</a></li>
+	<li class="disabled"><a href="">tab3</a></li>
+</ul>
+<div class="mu-tab-body">
+	<div class="mu-tab-cont active">1</div>
+	<div class="mu-tab-cont">2</div>
+	<div class="mu-tab-cont">3</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1>grid</h1>
+<h2>grid - ag-grid</h2>
+<div id="agGrid" class="ag-theme-balham" style="width:100%;height:300px;"></div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+</section>
+            </main>
+            <footer>
+				<div class="footer">Footer</div>
+            </footer>
+        </div>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<script src="../js/prefixfree.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script>
+            var columnDefs = [
+                {headerName: "Make", field: "make",sortable: true,checkboxSelection: true,headerCheckboxSelection: true},
+                {headerName: "Model", field: "model", cellRenderer:this.linkCellRenderer},
+                {headerName: "Customer", field: "customer", cellRenderer:this.countryCellRenderer},
+                {headerName: "Price", field: "price",sortable: true}
+            ];
+            
+            // specify the data
+            var rowData = [
+                {make: "Toyota", model: "Celica", price: 35000},
+                {make: "Ford", model: "Mondeo", price: 32000},
+                {make: "Porsche", model: "Boxter", price: 72000}
+            ];
+			//var rowData = null;
+            
+            
+            var gridOptions = {
+                columnDefs: columnDefs,
+                rowData: rowData
+            };        
+
+            let eGridDiv = document.querySelector('#agGrid');
+            new agGrid.Grid(eGridDiv, gridOptions);
+		</script>
+    </body>
+</html>

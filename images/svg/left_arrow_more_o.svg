@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/left_arrow _more copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13,3.08578644 L14.4142136,4.5 L5.915,13 L14.4142136,21.5 L13,22.9142136 L3.08578644,13 L13,3.08578644 Z M19,3.08578644 L20.4142136,4.5 L11.915,13 L20.4142136,21.5 L19,22.9142136 L9.08578644,13 L19,3.08578644 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/left_arrow-_more-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Path-14" fill="#5c9c00" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

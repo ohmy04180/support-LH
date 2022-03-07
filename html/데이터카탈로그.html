@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- HTLM5shiv ie6~8 -->
+		<!--[if lt IE 9]> 
+			<script src="../s/html5shiv.min.js"></script>
+			<script src="../js/respond.min.js"></script>
+			<script type="text/javascript">
+				alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+			</script>
+		<![endif]-->
+		<!-- agGrid -->
+		<script src="../ag-grid/ag-grid-community.min.noStyle.js"></script>
+		<link rel="stylesheet" href="../ag-grid/ag-grid.css">
+		<link rel="stylesheet" href="../ag-grid/ag-theme-balham.css">
+		<!-- agGrid -->
+		<link href="../css/reset.css" rel="stylesheet" />
+		<link href="../css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div class="header">
+					<h1 class="logo"><span>LH 한국토지주택공사 데이터 포털</span></h1>
+					
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#">데이터 검색</a>
+								<div class="nav-sub">
+									<ul>
+										<li><a href="#">통합 검색</a></li>
+										<li><a href="#">테마 검색</a></li>
+										<li><a href="#">시각화 검색</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">데이터 서비스</a>
+								<div class="nav-sub">
+									<ul>
+										<li><a href="#">전체 리포트 / 서비스</a></li>
+										<li><a href="#">추천 리포트 / 서비스</a></li>
+										<li><a href="#">나의 리포트 / 서비스</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">커뮤니케이션</a>
+								<div class="nav-sub">
+									<ul>
+										<li><a href="#">전체 현황</a></li>
+										<li><a href="#">수집 / 제공 요청</a>
+											<ul>
+												<li class="current"><a href="#">- 데이터 수집요청</a></li>
+												<li><a href="#">- 데이터 생성요청</a></li>
+												<li><a href="#">- 리포트 생성요청</a></li>
+											</ul>
+										</li>
+										<li><a href="#">과제 / 분석 현황</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">이용안내</a>
+								<div class="nav-sub">
+									<ul>
+										<li><a href="#">이용 가이드</a></li>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">자료실</a></li>
+										<li><a href="#">Q&A</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="click-side-menu"> 
+								<a href="#">사용자 이용현황</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="nav-dim"></div>
+					<!-- pc -->
+					<div class="private" tabindex="1">
+						<span class="user-name">홍길동 님</span>
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg plus"></i></button>
+					</div>
+					<!-- //pc -->
+					<!-- mobile -->
+					<div class="menu-btn">
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg menu"></i></button>
+					</div>
+					<!-- //mobile -->
+				</div>
+			</header>
+			<main>
+				<div>
+					<div class="title-wrap clearfix">
+						<div class="title fl">
+							<h4>데이터 카탈로그</h4>
+							<span>배치작업을 통해 데이터 베이스의 카탈로그 정보를 자동으로 수집하여 실제 데이터베이스의 스키마현황을 조회할 수 있습니다.</span>
+						</div>
+						<div class="breadcrumbs fr">
+							<ol class="mu-path">
+								<li><a href="">데이터 포털</a></li>
+								<li><a href="">데이터 카탈로그</a></li>
+							</ol>
+						</div>
+					</div>
+							<div class="button-wrap clearfix">
+								<div class="mu-item-group flex-wrap fr">
+									<div class="mu-selectbox w120">
+										<button class="mu-value"><span>전체</span></button>
+										<ul class="mu-list">
+											<li value="1">모델명</li>
+											<li value="2">상위주제영역</li>
+											<li value="3">주제영역</li>
+											<li value="4">테이블영문명</li>
+											<li value="5">테이블한글명</li>
+										</ul>
+									</div>
+									<div class="mu-input-icon w300">
+										<input type="text" class="mu-input" placeholder="검색어를 입력하세요">
+										<i class="mu-icon-svg search"></i>
+									</div>
+								</div>
+							</div>
+					<div class="contents-wrap">
+						<div class="left-contents">
+							<div class="tree-wrap">
+								<div class="sub-title">데이터 테이블</div>
+								<div class="inner-cell">
+									<ul class="ztree treeDemo" style="height:400px;"></ul>
+								</div>
+							</div>
+						</div>
+						<div class="right-contents">
+							<div class="grid-wrap">
+								<div class="grid" style="height:400px;">
+									<div id="agGrid" class="ag-theme-balham" style="width:100%;height:100%;"></div>
+								</div>
+								<!-- pagination -->
+								<div class="mu-pagination">
+									<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non" disabled="disabled"><i class="mu-icon-svg left-arrow-more"></i></button>
+									<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non" disabled="disabled"><i class="mu-icon-svg left-arrow"></i></button>
+									<ul>
+										<li class="active"><a href="">1</a></li>
+										<li><a href="">2</a></li>
+										<li><a href="">3</a></li>
+										<li><a href="">4</a></li>
+										<li><a href="">5</a></li>
+										<li><a href="">6</a></li>
+										<li><a href="">7</a></li>
+										<li><a href="">8</a></li>
+										<li><a href="">9</a></li>
+									</ul>
+									<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg right-arrow"></i></button>
+									<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg right-arrow-more"></i></button>
+								</div>
+								<!-- mobile pagination - 더보기 -->
+								<div class="mu-paging">
+									<button type="button" class="mu-btn"><span>+ 더 보기</span></button>
+								</div>
+								<!-- mobile pagination - 이전,다음 -->
+								<div class="mu-paging">
+									<button type="button" class="mu-btn"><span>이전으로</span></button>
+									<button type="button" class="mu-btn"><span>다음으로</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</main>
+			<footer>
+				<div class="footer">
+					<div class="footer-inner">
+						<div class="logo-area">
+							<div class="logo"><span>LH 한국토지주택공사</span></div>
+						</div>
+						<div class="info-area">
+							<address class="address">
+								<span>(52852) 경상남도 진주시 충의로 19(충무공동)</span>
+								<span class="sect">/</span>
+								<span>대표전화 : 1600-1004 (평일 09:00~18:00, 점심시간 12:00~13:00)</span>
+							</address>
+							<div class="copyright">
+								<span>Copyright ⓒ 2019 By Korea Land & Housing Corporation.</span>
+								<span>All rights reserved.</span>
+							</div>
+						</div>
+						<ul class="terms-area">
+							<li class="privacy"><a href="#">개인정보처리방침</a></li>
+							<li><a href="#">이용약관</a></li>
+							<li><a href="#">이메일주소무단수집거부</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			
+			<!-- 2020.07.07 mobile -->
+			<div class="side-menu-head mobile">
+				<div class="profile">
+					<div class="user-image">
+						<div class="user-image-thumb">
+							<img src="../images/common/photo_sample.jpg" width="100%" height="100%" alt="">
+						</div>
+					</div>
+					<div class="user-info">
+						<span class="user-name">홍길동 님</span>
+						<span class="user-department">ABC-DEF팀</span>
+					</div>
+					<div class="user-btn">
+						<!--
+						<button type="button" class="mu-btn"><span>로그인</span></button>
+						<button type="button" class="mu-btn"><span>회원가입</span></button>
+						-->
+						<button type="button" class="mu-btn"><span>내 정보</span></button>
+						<button type="button" class="mu-btn"><span>로그아웃</span></button>
+					</div>
+				</div>
+				<div class="btn-close">
+					<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+				</div>
+			</div>
+			<!-- //2020.07.07 mobile -->
+			<!-- 마이페이지 : slide menu -->
+			<div class="side-menu">
+				<div class="side-menu-head">
+					<div class="profile">
+						<div class="user-image">
+							<div class="user-image-thumb">
+								<img src="../images/common/photo_sample.jpg" width="100%" height="100%">
+							</div>
+						</div>
+						<div class="user-info">
+							<span class="user-name">홍길동 님</span>
+							<span class="user-department">ABC-DEF팀</span>
+						</div>
+						<div class="user-btn">
+							<button type="button" class="mu-btn"><span>내 정보</span></button>
+							<button type="button" class="mu-btn"><span>로그아웃</span></button>
+						</div>
+					</div>
+					<div class="btn-close">
+						<button type="button" class="mu-btn mu-btn-icon-only mu-btn-bg-non"><i class="mu-icon-svg close"></i></button>
+					</div>
+				</div>
+				<div class="title-wrap clearfix">
+					<div class="title fl">
+						<div>사용자 이용현황</div>
+					</div>
+				</div>
+				<div class="side-menu-body">
+					<ul class="alarm-badge">
+						<li>
+							<button type="button" class="mu-btn mu-btn-icon-only mu-btn-circle">
+								<i class="mu-icon-svg apply"></i>
+								<span class="mu-badge orange"></span>
+							</button>
+							<span>요청 1건</span>
+						</li>
+						<li>
+							<button type="button" class="mu-btn mu-btn-icon-only mu-btn-circle">
+								<i class="mu-icon-svg check"></i>
+								<span class="mu-badge yellow"></span>
+							</button>
+							<span>검토 1건</span>
+						</li>
+						<li>
+							<button type="button" class="mu-btn mu-btn-icon-only mu-btn-circle">
+								<i class="mu-icon-svg confirm"></i>
+								<span class="mu-badge green"></span>
+							</button>
+							<span>승인 1건</span>
+						</li>
+					</ul>
+					<div class="mu-accordion"><!-- id 추가시 스크립트 작동 : class로 수정 -->
+						<div class="mu-accordion-item">
+							<div class="mu-accordion-head"><a href=""><span>내가 요청한 글</span></a></div>
+							<div class="mu-accordion-body">
+								<ul class="mu-list">
+									<!-- 작성글이 없을시 -->
+									<li class="txt-none">
+										<span>작성된 글이 없습니다.</span>
+									</li>
+									<!-- //작성글이 없을시 -->
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청 차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mu-accordion-item">
+							<div class="mu-accordion-head"><a href=""><span>내가 작성한 댓글</span></a></div>
+							<div class="mu-accordion-body">
+								<ul class="mu-list">
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청 차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+												<span class="txt-main">김ㅇㅇ  책임님께 전달 드렸습니다. 김ㅇㅇ  책임님께 전달 드렸습니다. 김ㅇㅇ  책임님께 전달 드렸습니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+												<span class="txt-main">김ㅇㅇ  책임님께 전달 드렸습니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+												<span class="txt-main">김ㅇㅇ  책임님께 전달 드렸습니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+												<span class="txt-main">김ㅇㅇ  책임님께 전달 드렸습니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">차선이탈 경고 ( LDW ) 일일 단위 수집 통계 요청</span>
+												<span class="txt-main">김ㅇㅇ  책임님께 전달 드렸습니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mu-accordion-item">
+							<div class="mu-accordion-head"><a href=""><span>내 글에 대한 댓글</span></a></div>
+							<div class="mu-accordion-body">
+								<ul class="mu-list">
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">박 ㅇㅇ 책임 -  ABC 개발팀</span>
+												<span class="txt-main">요청하신 부분 반영하여 진행중입니다. 요청하신 부분 반영하여 진행중입니다. 요청하신 부분 반영하여 진행중입니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-sub">박 ㅇㅇ 책임 -  ABC 개발팀</span>
+												<span class="txt-main">요청하신 부분 반영하여 진행중입니다.</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mu-accordion-item">
+							<div class="mu-accordion-head"><a href=""><span>공지사항</span></a></div>
+							<div class="mu-accordion-body">
+								<ul class="mu-list">
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">[긴급 공지]  차선이탈 경고 ( LDW ) 일일 단위 수집 통계  DB 작업 공지</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">[긴급 공지]  차선이탈 경고 ( LDW ) 일일 단위 수집 통계  DB 작업 공지</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span class="txt-main">[긴급 공지]  차선이탈 경고 ( LDW ) 일일 단위 수집 통계  DB 작업 공지</span>
+											</dt>
+											<dd>
+												<span class="date">2020.06.30</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="quick-menu">
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-1"></i>
+							<span>데이터 수집 / 제공 요청</span>
+						</button>
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-2"></i>
+							<span>데이터 생성 요청</span>
+						</button>
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-3"></i>
+							<span>리포트 생성 요청</span>
+						</button>
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-4"></i>
+							<span>데이터 추출 요청</span>
+						</button>
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-5"></i>
+							<span>데이터 검증 요청</span>
+						</button>
+						<button type="button" class="mu-btn">
+							<i class="mu-icon-svg quick-menu-6"></i>
+							<span>메타 수정 / 보완 요청</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="side-menu-dim"></div>
+			<!-- //마이페이지 : slide menu -->
+		</div>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<script src="../js/prefixfree.min.js"></script>
+
+		<link rel="stylesheet" href="../css/zTreeStyle.css" type="text/css">
+		<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.ztree.core.js"></script>
+
+		<script src="../js/common.js"></script>
+		<script>
+		
+			var columnDefs = [
+				{headerName: "카테고리", field: "cl1", cellClass: "tc"},
+				{headerName: "제목", field: "cl2", width: 600, cellRenderer: 'link'},
+				{headerName: "등록자", field: "cl3", cellClass: "tc"},
+				{headerName: "등록일", field: "cl4", cellClass: "tc"},
+				{headerName: "조회", field: "cl5", cellClass: "tc", width: 100}
+			];
+			
+			var rowData = [
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"},
+				{cl1: "일반문의", cl2: "", cl3: "박ㅇㅇ(부서명)", cl4: "2020.4.16", cl5: "8"}
+			];
+			
+			var gridOptions = {
+				columnDefs: columnDefs,
+				rowData: rowData,
+				headerHeight: 40,
+				rowHeight: 38,
+				onGridReady: function (event) {
+					event.api.sizeColumnsToFit();
+				},
+				components: {
+					link: function (params) {
+						let flag = '<a href="#">적응형 주행 제어 ( ACC ) 전방차량 근첩 횟수 5분 통계 수집 요청</a>';
+						return flag;
+					}
+				},
+				onGridSizeChanged: function (event) {
+					event.api.sizeColumnsToFit();
+				}
+			};
+
+			let eGridDiv = document.querySelector('#agGrid');
+			new agGrid.Grid(eGridDiv, gridOptions);
+
+
+
+
+
+			<!--
+				var setting = {
+					view: {
+						showIcon: showIconForTree
+					},
+					data: {
+						simpleData: {
+							enable: true
+						}
+					}
+				};
+
+				var zNodes =[
+					{ id:1, pId:0, name:"pNode 1", open:true},
+					{ id:11, pId:1, name:"pNode 11"},
+					{ id:111, pId:11, name:"leaf node 111"},
+					{ id:112, pId:11, name:"leaf node 112"},
+					{ id:113, pId:11, name:"leaf node 113"},
+					{ id:114, pId:11, name:"leaf node 114"},
+					{ id:12, pId:1, name:"pNode 12"},
+					{ id:121, pId:12, name:"leaf node 121"},
+					{ id:122, pId:12, name:"leaf node 122"},
+					{ id:123, pId:12, name:"leaf node 123"},
+					{ id:124, pId:12, name:"leaf node 124"},
+					{ id:13, pId:1, name:"pNode 13 - no child", isParent:true},
+					{ id:2, pId:0, name:"pNode 2"},
+					{ id:21, pId:2, name:"pNode 21", open:true},
+					{ id:211, pId:21, name:"leaf node 211"},
+					{ id:212, pId:21, name:"leaf node 212"},
+					{ id:213, pId:21, name:"leaf node 213"},
+					{ id:214, pId:21, name:"leaf node 214"},
+					{ id:22, pId:2, name:"pNode 22"},
+					{ id:221, pId:22, name:"leaf node 221"},
+					{ id:222, pId:22, name:"leaf node 222"},
+					{ id:223, pId:22, name:"leaf node 223"},
+					{ id:224, pId:22, name:"leaf node 224"},
+					{ id:23, pId:2, name:"pNode 23"},
+					{ id:231, pId:23, name:"leaf node 231"},
+					{ id:232, pId:23, name:"leaf node 232"},
+					{ id:233, pId:23, name:"leaf node 233"},
+					{ id:234, pId:23, name:"leaf node 234"},
+					{ id:3, pId:0, name:"pNode 3 - no child", isParent:true}
+				];
+
+				function showIconForTree(treeId, treeNode) {
+					return !treeNode.isParent;
+				};
+
+				$(document).ready(function(){
+					$.fn.zTree.init($(".treeDemo"), setting, zNodes);
+				});
+			//-->
+
+		</script>
+	</body>
+</html>
